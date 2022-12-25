@@ -1,8 +1,7 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import { Container } from "../../Assets";
 import StatsImg from "../../Assets/img/stats-img.svg";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp from "react-countup";
 
 const StatsCounter = styled.section`
   padding: 40px 0;
@@ -12,23 +11,14 @@ const ContainerStats = styled(Container)`
 `;
 const Contents = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  display: flex;
+  align-items: center !important;
   flex-wrap: wrap;
   --bs-gutter-y: 1.5rem;
+  --bs-gutter-x: 1.5rem;
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
-`;
-const Block = styled.div`
-  @media (min-width: 992px) {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-  .row > * {
+  > * {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -36,6 +26,13 @@ const Block = styled.div`
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
   }
+`;
+const Block = styled.div`
+  @media (min-width: 992px) {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
   img {
     max-width: 100%;
     height: auto;
