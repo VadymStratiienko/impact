@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   --color-default: #222222;
   --color-primary: #008374;
   --color-secondary: #f85a40;
+  --bs-border-radius-xl: 1rem;
 }
 /*--------------------------------------------------------------
 # General
@@ -44,11 +45,18 @@ h6 {
   font-family: var(--font-primary);
 }
 
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
 /*--------------------------------------------------------------
 # Sections 
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
+  scroll-margin-top: 70px;
 }
 `;
