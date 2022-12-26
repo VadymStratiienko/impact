@@ -1,4 +1,3 @@
-import { BiBroadcast } from "react-icons/bi";
 import {
   BsArrowRight,
   BsBoundingBoxCircles,
@@ -37,7 +36,7 @@ const Table = styled.div`
 const Block = styled.div`
   @media (min-width: 992px) {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    width: 33.33333333% !important;
   }
   @media (max-width: 768px) {
     flex: 0 0 auto;
