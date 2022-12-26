@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { clientsData } from "../../data/clients";
 import { Container } from "../../Assets";
 
-const ClientsContainer = styled.section`
+const Section = styled.section`
   padding: 40px 0;
   .swiper {
     width: 100%;
@@ -43,7 +43,7 @@ const ClientsContainer = styled.section`
 
 const Clients = () => {
   return (
-    <ClientsContainer>
+    <Section>
       <Container>
         <Swiper
           slidesPerView={1}
@@ -86,7 +86,7 @@ const Clients = () => {
           })}
         </Swiper>
       </Container>
-    </ClientsContainer>
+    </Section>
   );
 };
 

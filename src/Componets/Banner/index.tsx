@@ -5,7 +5,7 @@ import { BiPlayCircle, BiCommand } from "react-icons/bi";
 import { BsEasel, BsGem, BsGeoAlt } from "react-icons/bs";
 import HeroImg from "../../Assets/img/hero-img.svg";
 
-const BannerComponent = styled.section`
+const Section = styled.section`
   width: 100%;
   position: relative;
   background: var(--color-primary);
@@ -210,7 +210,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <BannerComponent>
+    <Section>
       <ContainerBanner isScrolled={isScrolled}>
         <BlockInfo>
           <BlockStart>
@@ -280,7 +280,7 @@ const Banner = () => {
           </Boxes>
         </ContainerIcons>
       </IconBoxes>
-    </BannerComponent>
+    </Section>
   );
 };
 
