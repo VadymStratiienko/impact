@@ -79,6 +79,9 @@ const FooterLinks = styled.div`
     display: inline-block;
     line-height: 1;
   }
+  ul a:hover {
+    color: #fff;
+  }
 `;
 const FooterContact = styled.div`
   text-align: center !important;
@@ -120,6 +123,10 @@ const Social = styled.div`
     color: rgba(255, 255, 255, 0.7);
     margin-right: 10px;
     transition: 0.3s;
+  }
+  a:hover {
+    color: #fff;
+    border-color: #fff;
   }
 `;
 const ContainerInf = styled(Container)`
