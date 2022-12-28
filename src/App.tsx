@@ -15,6 +15,7 @@ import Topbar from "./Componets/Topbar";
 import FAQ from "./Componets/FAQ";
 import RecentBlogPosts from "./Componets/RecentBlogPosts";
 import Cantact from "./Componets/Contact";
+import Footer from "./Componets/Footer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <RecentBlogPosts />
         <Cantact />
       </main>
+      <Footer />
     </>
   );
 }

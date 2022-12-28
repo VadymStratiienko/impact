@@ -84,4 +84,10 @@ section {
   overflow: hidden;
   scroll-margin-top: 70px;
 }
+footer {
+    font-size: 14px;
+    background-color: var(--color-primary);
+    padding: 50px 0;
+    color: white;
+}
 `;
