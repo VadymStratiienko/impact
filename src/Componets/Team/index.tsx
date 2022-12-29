@@ -105,7 +105,7 @@ const Linkedin = styled(BsLinkedin)`
 
 const Team = () => {
   return (
-    <section>
+    <section id="team">
       <ContainerTeam>
         <SectionHeader>
           <h2>Our Team</h2>

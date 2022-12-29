@@ -190,7 +190,7 @@ const Icon = styled.div`
   color: rgba(255, 255, 255, 0.6);
 `;
 
-const Banner = () => {
+const BannerHome = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -210,7 +210,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <Section>
+    <Section id="hero">
       <ContainerBanner isScrolled={isScrolled}>
         <BlockInfo>
           <BlockStart>
@@ -284,4 +284,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default BannerHome;

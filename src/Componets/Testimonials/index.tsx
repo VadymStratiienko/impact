@@ -14,18 +14,18 @@ import Testimonials_5 from "../../Assets/img/testimonials/testimonials-5.jpg";
 
 const ContainerTestimonials = styled(Container)`
   display: block;
-  
+
   .swiper-pagination .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
   }
-  .swiper-pagination{
+  .swiper-pagination {
     margin-top: 20px;
     position: relative;
   }
-  
+
   .swiper-pagination .swiper-pagination-bullet-active {
     background-color: var(--color-primary);
   }
@@ -91,7 +91,7 @@ const BlockPerson = styled.div`
     margin: 0;
   }
 `;
-const Stars = styled.div`
+const Stars = styled.span`
   margin: 10px 0;
 `;
 
@@ -119,6 +119,9 @@ const QuoteRight = styled(FaQuoteRight)`
 `;
 
 const Testimonials = () => {
+  let Star = <StarFill />;
+  const StarsR = new Array(5).fill(Star);
+
   return (
     <section>
       <ContainerTestimonials>
@@ -165,13 +168,9 @@ const Testimonials = () => {
                   <div>
                     <h3>Saul Goodman</h3>
                     <h4>Ceo & Founder</h4>
-                    <Stars>
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                    </Stars>
+                    {StarsR.map((item, index) => {
+                      return <Stars key={index}>{item}</Stars>;
+                    })}
                   </div>
                 </BlockPerson>
                 <p>
@@ -191,13 +190,9 @@ const Testimonials = () => {
                   <div>
                     <h3>Sara Wilsson</h3>
                     <h4>Designer</h4>
-                    <Stars>
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                    </Stars>
+                    {StarsR.map((item, index) => {
+                      return <Stars key={index}>{item}</Stars>;
+                    })}
                   </div>
                 </BlockPerson>
                 <p>
@@ -219,13 +214,9 @@ const Testimonials = () => {
                   <div>
                     <h3>Jena Karlis</h3>
                     <h4>Store Owner</h4>
-                    <Stars>
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                    </Stars>
+                    {StarsR.map((item, index) => {
+                      return <Stars key={index}>{item}</Stars>;
+                    })}
                   </div>
                 </BlockPerson>
                 <p>
@@ -247,13 +238,9 @@ const Testimonials = () => {
                   <div>
                     <h3>Matt Brandon</h3>
                     <h4>Freelancer</h4>
-                    <Stars>
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                    </Stars>
+                    {StarsR.map((item, index) => {
+                      return <Stars key={index}>{item}</Stars>;
+                    })}
                   </div>
                 </BlockPerson>
                 <p>
@@ -274,13 +261,9 @@ const Testimonials = () => {
                   <div>
                     <h3>John Larson</h3>
                     <h4>Entrepreneur</h4>
-                    <Stars>
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                      <StarFill />
-                    </Stars>
+                    {StarsR.map((item, index) => {
+                      return <Stars key={index}>{item}</Stars>;
+                    })}
                   </div>
                 </BlockPerson>
                 <p>

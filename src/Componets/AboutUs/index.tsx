@@ -173,7 +173,7 @@ const BlockVideo = styled.div`
 
 const About = () => {
   return (
-    <section>
+    <section id="about">
       <ContainerAbout>
         <SectionHeader>
           <h2>About Us</h2>

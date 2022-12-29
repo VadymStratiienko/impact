@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../../Assets";
 
-const HeaderContainer = styled.header<{isScrolled:boolean}>`
+const HeaderContainer = styled.header<{ isScrolled: boolean }>`
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
@@ -12,14 +13,15 @@ const HeaderContainer = styled.header<{isScrolled:boolean}>`
   margin-right: auto;
   display: flex;
   align-items: center;
-  position:${({isScrolled}) => (isScrolled && "fixed")};
+  position: ${({ isScrolled }) => isScrolled && "fixed"};
   top: 0;
   right: 0;
   left: 0;
-  height: ${({isScrolled}) => (isScrolled && "70px")};
-  box-shadow:${({isScrolled}) => (isScrolled ? " 0px 2px 20px rgb(0 0 0 / 10%)" : "")};
-`
-const Logo = styled.a`
+  height: ${({ isScrolled }) => isScrolled && "70px"};
+  box-shadow: ${({ isScrolled }) =>
+    isScrolled ? " 0px 2px 20px rgb(0 0 0 / 10%)" : ""};
+`;
+const Logo = styled(Link)`
   display: flex;
   align-items: center;
 
@@ -56,7 +58,7 @@ const Navbar = styled.nav`
       padding: 10px 0 10px 28px;
     }
 
-    ul li a,
+    ul a,
     a:focus {
       display: flex;
       align-items: center;
@@ -82,70 +84,101 @@ const Navbar = styled.nav`
       width: 0px;
       transition: all 0.3s ease-in-out 0s;
     }
+
     a:hover::before,
-    li:hover > a::before {
+    li:hover > a::before,
+    .active::before {
       visibility: visible;
       width: 100%;
     }
-    li:hover>a {
-    color: #fff;
+    a:hover,
+    .active,
+    .active:focus,
+    li:hover > a {
+      color: #fff;
+    }
   }
-  }
-  @media (max-width: 1280px) { 
+  @media (max-width: 1280px) {
     display: none;
   }
-
 `;
 
 const Header = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-          if (window.scrollY > 0) {
-            setIsScrolled(true);
-          } else {
-            setIsScrolled(false);
-          }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+
+  let navbarlinks = document.querySelectorAll('#navbar a');
+  console.log(navbarlinks);
+  
+useEffect (() => {
+  function navbarlinksActive() {
+    navbarlinks.forEach((navbarlink:any) => {
+
+      if (!navbarlink.hash) return;
+
+      let section = document.querySelector(navbarlink.hash);
+      if (!section) return;
+
+      let position = window.scrollY + 200;
+
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        navbarlink.classList.add('active');
+      } else {
+        navbarlink.classList.remove('active');
+      }
+    })
+  }
+  document.addEventListener('scroll', navbarlinksActive);
+},[navbarlinks])
+
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <HeaderContainer isScrolled={isScrolled}>
       <Container>
-        <Logo href="">
+        <Logo to="/">
           <h1>
             Impact<span>.</span>
           </h1>
         </Logo>
-        <Navbar>
+        <Navbar id="navbar">
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="">Services</a>
+              <a href="#services">Services</a>
             </li>
             <li>
-              <a href="">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li>
-              <a href="">Team</a>
+              <a href="#team">Team</a>
             </li>
             <li>
-              <a href="">Blog</a>
+              <NavLink to="blog">Blog</NavLink>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </Navbar>

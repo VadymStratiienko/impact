@@ -149,7 +149,7 @@ const Portfolio = () => {
   }
 
   return (
-    <Section>
+    <Section id="portfolio">
       <ConteinerPortfolio>
         <SectionHeader>
           <h2>Portfolio</h2>
