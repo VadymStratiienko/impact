@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container, SectionHeader } from "../../Assets";
 import { portfolioData } from "../../data/portfolio";
@@ -200,7 +201,7 @@ const Portfolio = () => {
                     <img src={item.img} alt="" />
                     <Info>
                       <h4>
-                        <a href="">{item.title}</a>
+                        <Link to="portfolio-details">{item.title}</Link>
                       </h4>
                       <p>{item.text}</p>
                     </Info>

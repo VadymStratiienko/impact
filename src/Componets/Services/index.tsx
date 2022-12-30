@@ -38,7 +38,7 @@ const Block = styled.div`
     flex: 0 0 auto;
     width: 33.33333333% !important;
   }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     flex: 0 0 auto;
     width: 50%;
   }

@@ -98,10 +98,36 @@ const PostDate = styled.p`
     color: #3c3c3c;
   }
 `;
+const BlogPagination = styled.div`
+  margin-top: 30px;
+  color: #555555;
+  ul {
+    display: flex;
+    justify-content: center !important;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      margin: 0 5px;
+      transition: 0.3s;
+      border-radius: 10px;
+    }
+  }
+  ul li a {
+    color: var(--color-default);
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .active {
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 10px;
+  }
+`;
 
 const LandingBlog = () => {
-  
-
   return (
     <section id="blog">
       <ContainerBlog>
@@ -115,7 +141,7 @@ const LandingBlog = () => {
                   </PostImg>
                   <Category>{item.category}</Category>
                   <h2>
-                  <Link to="/blog-details">{item.title}</Link>
+                    <Link to="/blog-details">{item.title}</Link>
                   </h2>
                   <Author>
                     <img src={item.photoAuthor} alt="" />
@@ -130,6 +156,21 @@ const LandingBlog = () => {
               </Post>
             );
           })}
+          <BlogPagination>
+            <ul>
+              <li>
+                <a href="#">1</a>
+              </li>
+              <li>
+                <a href="#" className="active">
+                  2
+                </a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+            </ul>
+          </BlogPagination>
         </WrapperPosts>
       </ContainerBlog>
     </section>

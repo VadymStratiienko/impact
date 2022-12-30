@@ -108,6 +108,30 @@ const BlockForm = styled.div`
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
   }
+  input[type="text"],[type="email"] {
+    padding: 12px 15px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin: 0;
+    font-family: inherit;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus, textarea:focus{
+    border-color: var(--color-primary);
+  }
+  textarea {
+    resize: none;
+  }
 `;
 const BlockInput = styled.div`
   padding-bottom: 8px;

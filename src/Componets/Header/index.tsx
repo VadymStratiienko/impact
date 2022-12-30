@@ -174,7 +174,7 @@ useEffect (() => {
               <a href="#team">Team</a>
             </li>
             <li>
-              <NavLink to="blog">Blog</NavLink>
+              <a href="blog">Blog</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
