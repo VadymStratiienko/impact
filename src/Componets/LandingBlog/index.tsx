@@ -1,12 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
+import { Container } from "../../Assets";
 import { Posts } from "../../data/posts";
 
-const Section = styled.section`
-  background-color: #f6f6f6;
-`;
 const ContainerBlog = styled(Container)`
   display: block;
 `;
@@ -103,23 +99,12 @@ const PostDate = styled.p`
   }
 `;
 
-const RecentBlogPosts = () => {
-
-  if(Posts.length > 3) {
-    Posts.length = 3
-  }
+const LandingBlog = () => {
   
+
   return (
-    <Section id="recent-posts">
+    <section id="blog">
       <ContainerBlog>
-        <SectionHeader>
-          <h2>Recent Blog Posts</h2>
-          <p>
-            Consequatur libero assumenda est voluptatem est quidem illum et
-            officia imilique qui vel architecto accusamus fugit aut qui
-            distinctio
-          </p>
-        </SectionHeader>
         <WrapperPosts>
           {Posts.map((item, index) => {
             return (
@@ -130,7 +115,7 @@ const RecentBlogPosts = () => {
                   </PostImg>
                   <Category>{item.category}</Category>
                   <h2>
-                    <Link to="/blog-details">{item.title}</Link>
+                  <Link to="/blog-details">{item.title}</Link>
                   </h2>
                   <Author>
                     <img src={item.photoAuthor} alt="" />
@@ -147,8 +132,8 @@ const RecentBlogPosts = () => {
           })}
         </WrapperPosts>
       </ContainerBlog>
-    </Section>
+    </section>
   );
 };
 
-export default RecentBlogPosts;
+export default LandingBlog;

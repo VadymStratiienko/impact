@@ -1,9 +1,15 @@
 import Blog_1 from "../Assets/img/blog/blog-1.jpg";
 import Blog_2 from "../Assets/img/blog/blog-2.jpg";
 import Blog_3 from "../Assets/img/blog/blog-3.jpg";
+import Blog_4 from "../Assets/img/blog/blog-4.jpg";
+import Blog_5 from "../Assets/img/blog/blog-5.jpg";
+import Blog_6 from "../Assets/img/blog/blog-6.jpg";
 import Author_1 from "../Assets/img/blog/blog-author.jpg";
 import Author_2 from "../Assets/img/blog/blog-author-2.jpg";
 import Author_3 from "../Assets/img/blog/blog-author-3.jpg";
+import Author_4 from "../Assets/img/blog/blog-author-4.jpg";
+import Author_5 from "../Assets/img/blog/blog-author-5.jpg";
+import Author_6 from "../Assets/img/blog/blog-author-6.jpg";
 
 interface IPosts {
   postImg: string;
@@ -14,7 +20,7 @@ interface IPosts {
   date: string;
 }
 
-export const Posts:IPosts[] = [
+export const Posts: IPosts[] = [
   {
     postImg: Blog_1,
     category: "Politics",
@@ -38,5 +44,29 @@ export const Posts:IPosts[] = [
     photoAuthor: Author_3,
     name: "Mark Dower",
     date: "Jun 22, 2022",
+  },
+  {
+    postImg: Blog_4,
+    category: "Sports",
+    title: "Non rem rerum nam cum quo minus olor distincti",
+    photoAuthor: Author_4,
+    name: "Lisa Neymar",
+    date: "Jun 30, 2022",
+  },
+  {
+    postImg: Blog_5,
+    category: "Politics",
+    title: "Accusamus quaerat aliquam qui debitis facilis consequatur",
+    photoAuthor: Author_5,
+    name: "Denis Peterson",
+    date: "Jun 30, 2022",
+  },
+  {
+    postImg: Blog_6,
+    category: "Entertainment",
+    title: "Distinctio provident quibusdam numquam aperiam aut",
+    photoAuthor: Author_6,
+    name: "Mika Lendon",
+    date: "Feb 14, 2022",
   },
 ];

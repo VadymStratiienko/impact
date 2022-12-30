@@ -108,7 +108,6 @@ const Header = () => {
 
 
   let navbarlinks = document.querySelectorAll('#navbar a');
-  console.log(navbarlinks);
   
 useEffect (() => {
   function navbarlinksActive() {
