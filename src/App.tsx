@@ -7,10 +7,18 @@ import Footer from "./Componets/Footer";
 import Blog from "./page/Blog";
 import BlogDetails from "./page/BlogDetails"
 import PortfolioDetails from "./page/PortfolioDetails";
+import { BaseModalBackground, ModalProvider } from 'styled-react-modal';
+import styled from "styled-components";
+
+const SpecialModalBackground = styled(BaseModalBackground)`
+  background-color: #0c0b0b;
+  z-index: 999999999;
+  display: inline-block;
+`
 
 function App() {
   return (
-    <>
+    <ModalProvider backgroundComponent={SpecialModalBackground}>
       <Topbar />
       <Header />
       <Routes>
@@ -20,7 +28,7 @@ function App() {
         <Route path="/portfolio-details" element={<PortfolioDetails />} />
       </Routes>
       <Footer />
-    </>
+    </ModalProvider>
   );
 }
 

@@ -64,7 +64,7 @@ const Clients = () => {
             992: {
               slidesPerView: 6,
               spaceBetween: 120,
-            }
+            },
           }}
           speed={400}
           loop={true}
@@ -74,7 +74,6 @@ const Clients = () => {
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Navigation]}
-          navigation={true}
           className="ClientSwiper"
         >
           {clientsData.map((item, index) => {

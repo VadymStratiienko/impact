@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container } from "../../Assets";
+import Sidebar from "../Sidebar";
 
 const HeaderContainer = styled.header<{ isScrolled: boolean }>`
   transition: all 0.5s;
@@ -38,6 +39,9 @@ const Logo = styled(Link)`
       color: #f96f59;
     }
   }
+`;
+const ContainerNav = styled(Container)`
+  justify-content: space-between;
 `;
 const Navbar = styled.nav`
   @media (min-width: 1280px) {
@@ -102,35 +106,68 @@ const Navbar = styled.nav`
     display: none;
   }
 `;
+const StyledBurger = styled.div<{ open: boolean }>`
+  width: 28px;
+  height: 28px;
+  display: none;
+  @media (max-width: 1278px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    z-index: 999999;
+  }
+  div {
+    width: 28px;
+    height: 2px;
+    background-color: ${({ open }) => (open ? "#ccc" : "#ffffff")};
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+    &:nth-child(1) {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+    &:nth-child(2) {
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
+    }
+    &:nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+`;
+interface Iroutes {
+  link: string;
+  title: string;
+}
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(false);
 
+  let navbarlinks = document.querySelectorAll("#navbar a");
 
-  let navbarlinks = document.querySelectorAll('#navbar a');
-  
-useEffect (() => {
-  function navbarlinksActive() {
-    navbarlinks.forEach((navbarlink:any) => {
+  useEffect(() => {
+    function navbarlinksActive() {
+      navbarlinks.forEach((navbarlink: any) => {
+        if (!navbarlink.hash) return;
 
-      if (!navbarlink.hash) return;
+        let section = document.querySelector(navbarlink.hash);
+        if (!section) return;
 
-      let section = document.querySelector(navbarlink.hash);
-      if (!section) return;
+        let position = window.scrollY + 200;
 
-      let position = window.scrollY + 200;
-
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active');
-      } else {
-        navbarlink.classList.remove('active');
-      }
-    })
-  }
-  document.addEventListener('scroll', navbarlinksActive);
-},[navbarlinks])
-
-
+        if (
+          position >= section.offsetTop &&
+          position <= section.offsetTop + section.offsetHeight
+        ) {
+          navbarlink.classList.add("active");
+        } else {
+          navbarlink.classList.remove("active");
+        }
+      });
+    }
+    document.addEventListener("scroll", navbarlinksActive);
+  }, [navbarlinks]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -148,9 +185,40 @@ useEffect (() => {
     };
   }, []);
 
+  const routes: Iroutes[] = [
+    {
+      link: "#hero",
+      title: "Home",
+    },
+    {
+      link: "#about",
+      title: "About",
+    },
+    {
+      link: "#services",
+      title: "Services",
+    },
+    {
+      link: "#portfolio",
+      title: "Portfolio",
+    },
+    {
+      link: "#team",
+      title: "Team",
+    },
+    {
+      link: "blog",
+      title: "Blog",
+    },
+    {
+      link: "#contact",
+      title: "Contact",
+    },
+  ];
+
   return (
     <HeaderContainer isScrolled={isScrolled}>
-      <Container>
+      <ContainerNav>
         <Logo to="/">
           <h1>
             Impact<span>.</span>
@@ -158,30 +226,28 @@ useEffect (() => {
         </Logo>
         <Navbar id="navbar">
           <ul>
-            <li>
-              <a href="#hero">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a href="#team">Team</a>
-            </li>
-            <li>
-              <a href="blog">Blog</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            {routes.map((item, index) => {
+              return (
+                <li key={index}>
+                  <a href={item.link} onClick={() => setOpen(!open)}>
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </Navbar>
-      </Container>
+        <StyledBurger
+          open={open}
+          onClick={() => setOpen(!open)}
+          style={{ marginLeft: "20px" }}
+        >
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+        <Sidebar open={open} setOpen={setOpen} />
+      </ContainerNav>
     </HeaderContainer>
   );
 };

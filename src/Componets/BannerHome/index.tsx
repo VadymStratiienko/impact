@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Container } from "../../Assets";
-import { BiPlayCircle, BiCommand } from "react-icons/bi";
+import { BiCommand } from "react-icons/bi";
 import { BsEasel, BsGem, BsGeoAlt } from "react-icons/bs";
 import HeroImg from "../../Assets/img/hero-img.svg";
+import ModalVideo from "../Modal/ModalVideo";
 
 const Section = styled.section`
   width: 100%;
@@ -80,22 +81,7 @@ const BtnGetStarted = styled.a`
   box-shadow: 0 0 15px rgb(0 0 0 / 8%);
   border: 2px solid rgba(255, 255, 255, 0.1);
 `;
-const BtnWatchVideo = styled.a`
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: #fff;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-`;
-const PlayCircle = styled(BiPlayCircle)`
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-`;
+
 const BlockImg = styled.div`
   order: 1 !important;
   @media (min-width: 992px) {
@@ -142,11 +128,15 @@ const Boxes = styled.div`
 const Box = styled.div`
   @media (min-width: 1200px) {
     flex: 0 0 auto;
-    width: 25%;
+    width: 25% !important;
+  }
+  @media (min-width: 768px) {
+    flex: 0 0 auto;
+    width: 50%;
   }
   @media (max-width: 768px) {
     flex: 0 0 auto;
-    width: 50%;
+    width: 100%;
   }
 `;
 const IconBox = styled.div`
@@ -189,9 +179,30 @@ const Icon = styled.div`
   line-height: 1;
   color: rgba(255, 255, 255, 0.6);
 `;
+const BtnWatchVideo = styled.a`
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  i {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+  }
+  :hover i {
+    color: #fff;
+  }
+`;
 
 const BannerHome = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -223,10 +234,11 @@ const BannerHome = () => {
             </p>
             <BlockBtn>
               <BtnGetStarted href="#about">Get Started</BtnGetStarted>
-              <BtnWatchVideo href="">
-                <PlayCircle />
+              <BtnWatchVideo onClick={() => setIsOpen(true)}>
+                <i className="bi bi-play-circle"></i>
                 <span>Watch Video</span>
               </BtnWatchVideo>
+              {isOpen && <ModalVideo isOpen={isOpen} setIsOpen={setIsOpen} />}
             </BlockBtn>
           </BlockStart>
           <BlockImg>

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Container, SectionHeader } from "../../Assets";
 import AboutImg from "../../Assets/img/about.jpg";
 import AboutImg_2 from "../../Assets/img/about-2.jpg";
 import { BsCheckCircleFill } from "react-icons/bs";
+import ModalVideo from "../Modal/ModalVideo";
 
 const ContainerAbout = styled(Container)`
   display: flex;
@@ -71,6 +72,7 @@ const Content = styled.div`
     padding-left: 3rem !important;
   }
 `;
+const BtnVideo = styled.a``;
 const BlockVideo = styled.div`
   position: relative !important;
   margin-top: 1.5rem !important;
@@ -172,6 +174,7 @@ const BlockVideo = styled.div`
 `;
 
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section id="about">
       <ContainerAbout>
@@ -229,7 +232,8 @@ const About = () => {
               </p>
               <BlockVideo>
                 <img src={AboutImg_2} alt="" />
-                <a href="#"></a>
+                <BtnVideo onClick={() => setIsOpen(true)}></BtnVideo>
+                {isOpen && <ModalVideo isOpen={isOpen} setIsOpen={setIsOpen} />}
               </BlockVideo>
             </Content>
           </Block>
