@@ -51,7 +51,15 @@ ul {
     margin-bottom: 1rem;
     padding-left: 2rem;
 }
-
+.scroll-to-top {
+  background: var(--color-secondary);
+  z-index:99;
+  border-radius: 50%;
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;

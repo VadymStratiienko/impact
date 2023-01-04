@@ -9,7 +9,8 @@ import BlogDetails from "./page/BlogDetails";
 import PortfolioDetails from "./page/PortfolioDetails";
 import { BaseModalBackground, ModalProvider } from "styled-react-modal";
 import styled from "styled-components";
-import 'aos/dist/aos.css';
+import ScrollToTop from "react-scroll-to-top";
+import "aos/dist/aos.css";
 import AOS from "aos";
 
 const SpecialModalBackground = styled(BaseModalBackground)`
@@ -39,6 +40,7 @@ function App() {
         <Route path="/portfolio-details" element={<PortfolioDetails />} />
       </Routes>
       <Footer />
+      <ScrollToTop smooth className="scroll-to-top" color="white" />
     </ModalProvider>
   );
 }
