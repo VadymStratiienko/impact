@@ -63,15 +63,15 @@ const ItemStats = styled.div`
 const Stats = () => {
   return (
     <StatsCounter>
-      <ContainerStats>
+      <ContainerStats data-aos="fade-up">
         <Contents>
           <Block>
             <img src={StatsImg} alt="" />
           </Block>
           <Block>
-            <ItemStats>
+            <ItemStats data-aos="fade-up">
               <span>
-                <CountUp start={100} end={232} />
+                <CountUp start={100} end={232} duration={5} />
               </span>
               <p>
                 <strong>Happy Clients</strong> consequuntur quae diredo para
@@ -80,7 +80,7 @@ const Stats = () => {
             </ItemStats>
             <ItemStats>
               <span>
-                <CountUp start={100} end={521} />
+                <CountUp start={100} end={521} duration={5} />
               </span>
               <p>
                 <strong>Projects</strong> adipisci atque cum quia aut
@@ -88,7 +88,7 @@ const Stats = () => {
             </ItemStats>
             <ItemStats>
               <span>
-                <CountUp start={100} end={453} />
+                <CountUp start={100} end={453} duration={5} />
               </span>
               <p>
                 <strong>Hours Of Support</strong> aut commodi quaerat

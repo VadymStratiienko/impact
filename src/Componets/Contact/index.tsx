@@ -252,7 +252,7 @@ const ButtonBlock = styled.div`
 const Cantact = () => {
   return (
     <section id="contact">
-      <ContainerContact>
+      <ContainerContact  data-aos="fade-up">
         <SectionHeader>
           <h2>Contact</h2>
           <p>

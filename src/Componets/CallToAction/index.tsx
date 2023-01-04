@@ -127,7 +127,7 @@ const CtaBtn = styled.a`
 const CallToAction = () => {
   return (
     <section>
-      <ContainerAction>
+      <ContainerAction data-aos="zoom-out">
         <BtnPlay href=""></BtnPlay>
         <h3>Call To Action</h3>
         <p>

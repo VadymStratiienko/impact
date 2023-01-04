@@ -180,7 +180,7 @@ const X = styled(BsX)`
 const Pricing = () => {
   return (
     <Section>
-      <ContainerPrice>
+      <ContainerPrice data-aos="fade-up">
         <SectionHeader>
           <h2>Pricing</h2>
           <p>
@@ -188,7 +188,7 @@ const Pricing = () => {
             incidunt dolores placeat sunt id nobis omnis tiledo stran delop
           </p>
         </SectionHeader>
-        <Prices>
+        <Prices  data-aos="zoom-out" data-aos-delay="100">
           <BlockPrice>
             <PricingItem>
               <h3>Free Plan</h3>

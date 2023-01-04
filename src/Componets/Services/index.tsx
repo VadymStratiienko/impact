@@ -151,7 +151,7 @@ const ChatSquareText = styled(BsChatSquareText)`
 const Services = () => {
   return (
     <Section id="services">
-      <ContainerServices>
+      <ContainerServices data-aos="fade-up">
         <SectionHeader>
           <h2>Our Services</h2>
           <p>
@@ -159,7 +159,7 @@ const Services = () => {
             incidunt dolores placeat sunt id nobis omnis tiledo stran delop
           </p>
         </SectionHeader>
-        <Table>
+        <Table data-aos="fade-up" data-aos-delay="100">
           <Block>
             <ServiceItem>
               <BlockIcon>

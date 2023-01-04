@@ -124,7 +124,7 @@ const Testimonials = () => {
 
   return (
     <section>
-      <ContainerTestimonials>
+      <ContainerTestimonials data-aos="fade-up">
         <SectionHeader>
           <h2>Testimonials</h2>
           <p>
@@ -133,6 +133,8 @@ const Testimonials = () => {
           </p>
         </SectionHeader>
         <Swiper
+          data-aos="fade-up"
+          data-aos-delay="100"
           speed={600}
           loop={true}
           autoplay={{

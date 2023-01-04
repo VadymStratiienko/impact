@@ -53,49 +53,11 @@ const BlockAccordion = styled.div`
     width: 66.66666667%;
   }
 `;
-const AccordionItem = styled.div`
-  border: 0;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px rgb(0 0 0 / 6%);
-  border-radius: 10px;
-  :first-child {
-    border-top: 0;
-  }
-  :last-child {
-    margin-bottom: 0;
-  }
-  h3 {
-    margin-bottom: 0;
-    button {
-      padding: 20px 50px 20px 20px;
-      font-weight: 600;
-      border: 0;
-      font-size: 18px;
-      line-height: 24px;
-      color: var(--color-default);
-      text-align: left;
-      background: #fff;
-      box-shadow: none;
-      border-radius: 10px;
-      span {
-        padding-right: 10px;
-        font-size: 20px;
-        line-height: 0;
-        color: var(--color-primary);
-      }
-    }
-    button:not(.collapsed) {
-      color: var(--color-primary);
-      border-bottom: 0;
-      box-shadow: none;
-    }
-  }
-`;
 
 const FAQ = () => {
   return (
     <section>
-      <ContainetFAQ>
+      <ContainetFAQ data-aos="fade-up">
         <WrapperFAQ>
           <BlockContent>
             <Content>

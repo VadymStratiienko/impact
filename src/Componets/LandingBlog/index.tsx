@@ -130,7 +130,7 @@ const BlogPagination = styled.div`
 const LandingBlog = () => {
   return (
     <section id="blog">
-      <ContainerBlog>
+      <ContainerBlog data-aos="fade-up">
         <WrapperPosts>
           {Posts.map((item, index) => {
             return (

@@ -52,7 +52,11 @@ ul {
     padding-left: 2rem;
 }
 
-
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
 
 /*--------------------------------------------------------------
 # Sections 

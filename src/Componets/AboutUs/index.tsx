@@ -177,7 +177,7 @@ const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section id="about">
-      <ContainerAbout>
+      <ContainerAbout data-aos="fade-up">
         <SectionHeader>
           <h2>About Us</h2>
           <p>

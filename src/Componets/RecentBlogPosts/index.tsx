@@ -111,7 +111,7 @@ const RecentBlogPosts = () => {
   
   return (
     <Section id="recent-posts">
-      <ContainerBlog>
+      <ContainerBlog  data-aos="fade-up">
         <SectionHeader>
           <h2>Recent Blog Posts</h2>
           <p>

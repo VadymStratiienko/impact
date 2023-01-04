@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Container, SectionHeader } from "../../Assets";
 import { portfolioData } from "../../data/portfolio";
-
+import ModalImg from "../Modal/ModalImg";
 
 const Section = styled.section`
   background-color: #f6f6f6;
@@ -112,10 +112,29 @@ const Info = styled.div`
   }
 `;
 
+interface IProduct {
+  title: string;
+  text: string;
+  img: string;
+  category: string;
+}
+
 const Portfolio = () => {
   const [filtered, setFiltered] = useState(portfolioData);
   const [toggleState, setToggleState] = useState(1);
+  const [clickedImg, setClickedImg] = useState<string[]| string | null | IProduct[]>(
+    null
+  );
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isOpen, setIsOpen] = useState(false);
 
+
+  const handleClick = (index: number) => {
+    setCurrentIndex(index);
+    setIsOpen(true);
+    setClickedImg(filtered[0].img)
+  };
+  
   const toggleTab = (index: number) => {
     setToggleState(index);
   };
@@ -151,7 +170,7 @@ const Portfolio = () => {
 
   return (
     <Section id="portfolio">
-      <ConteinerPortfolio>
+      <ConteinerPortfolio  data-aos="fade-up">
         <SectionHeader>
           <h2>Portfolio</h2>
           <p>
@@ -160,7 +179,7 @@ const Portfolio = () => {
           </p>
         </SectionHeader>
 
-        <div>
+        <div data-aos="fade-up" data-aos-delay="100">
           <Tabs>
             <li
               className={toggleState === 1 ? " active-tabs" : ""}
@@ -198,7 +217,11 @@ const Portfolio = () => {
               return (
                 <PortfolioItem key={index}>
                   <PortfolioWrapp>
-                    <img src={item.img} alt="" />
+                    <img
+                      src={item.img}
+                      alt=""
+                      onClick={() => handleClick(index)}
+                    />
                     <Info>
                       <h4>
                         <Link to="portfolio-details">{item.title}</Link>
@@ -209,6 +232,14 @@ const Portfolio = () => {
                 </PortfolioItem>
               );
             })}
+
+            {isOpen && (
+              <ModalImg
+              filtered={filtered}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+              />
+            )}
           </WrapperPortfolio>
         </div>
       </ConteinerPortfolio>

@@ -507,7 +507,7 @@ const Tags = styled.div`
 const LandingBlogDetails = () => {
   return (
     <section>
-      <ContainerBlog>
+      <ContainerBlog  data-aos="fade-up">
         <Contents>
           <Post>
             <BlogDetails>

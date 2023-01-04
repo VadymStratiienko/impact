@@ -44,7 +44,7 @@ const Section = styled.section`
 const Clients = () => {
   return (
     <Section>
-      <Container>
+      <Container  data-aos="zoom-out">
         <Swiper
           slidesPerView={1}
           spaceBetween={30}

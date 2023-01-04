@@ -59,7 +59,7 @@ const Wrapper = styled.div`
 
 const AccordionComponent = () => {
   return (
-    <Wrapper>
+    <Wrapper data-aos="fade-up" data-aos-delay="100">
       {" "}
       <Accordion flush>
         <Accordion.Item eventKey="0">

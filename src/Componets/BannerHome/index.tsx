@@ -223,7 +223,7 @@ const BannerHome = () => {
   return (
     <Section id="hero">
       <ContainerBanner isScrolled={isScrolled}>
-        <BlockInfo>
+        <BlockInfo data-aos="fade-in">
           <BlockStart>
             <h2>
               Welcome to <span>Impact</span>
@@ -242,14 +242,14 @@ const BannerHome = () => {
             </BlockBtn>
           </BlockStart>
           <BlockImg>
-            <img src={HeroImg} alt="" />
+            <img src={HeroImg} alt="" data-aos="zoom-out" data-aos-delay="100"/>
           </BlockImg>
         </BlockInfo>
       </ContainerBanner>
       <IconBoxes>
         <ContainerIcons>
           <Boxes>
-            <Box>
+            <Box data-aos="fade-up" data-aos-delay="100">
               <IconBox>
                 <Icon>
                   <BsEasel />
@@ -259,7 +259,7 @@ const BannerHome = () => {
                 </h4>
               </IconBox>
             </Box>
-            <Box>
+            <Box data-aos="fade-up" data-aos-delay="200">
               <IconBox>
                 <Icon>
                   <BsGem />
@@ -269,7 +269,7 @@ const BannerHome = () => {
                 </h4>
               </IconBox>
             </Box>
-            <Box>
+            <Box data-aos="fade-up" data-aos-delay="300">
               <IconBox>
                 <Icon>
                   <BsGeoAlt />
@@ -279,7 +279,7 @@ const BannerHome = () => {
                 </h4>
               </IconBox>
             </Box>
-            <Box>
+            <Box data-aos="fade-up" data-aos-delay="500">
               <IconBox>
                 <Icon>
                   <BiCommand />

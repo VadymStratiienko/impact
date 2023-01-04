@@ -106,7 +106,7 @@ const Linkedin = styled(BsLinkedin)`
 const Team = () => {
   return (
     <section id="team">
-      <ContainerTeam>
+      <ContainerTeam data-aos="fade-up">
         <SectionHeader>
           <h2>Our Team</h2>
           <p>
@@ -115,7 +115,7 @@ const Team = () => {
           </p>
         </SectionHeader>
         <WrapperTeam>
-          <Member>
+          <Member data-aos="fade-up" data-aos-delay="100">
             <Block>
               <img src={Team_1} alt="" />
               <h4>Walter White</h4>
@@ -136,7 +136,7 @@ const Team = () => {
               </Social>
             </Block>
           </Member>
-          <Member>
+          <Member data-aos="fade-up" data-aos-delay="200">
             <Block>
               <img src={Team_2} alt="" />
               <h4>Sarah Jhinson</h4>
@@ -157,7 +157,7 @@ const Team = () => {
               </Social>
             </Block>
           </Member>
-          <Member>
+          <Member data-aos="fade-up" data-aos-delay="300">
             <Block>
               <img src={Team_3} alt="" />
               <h4>William Anderson</h4>
@@ -178,7 +178,7 @@ const Team = () => {
               </Social>
             </Block>
           </Member>
-          <Member>
+          <Member data-aos="fade-up" data-aos-delay="400">
             <Block>
               <img src={Team_4} alt="" />
               <h4>Amanda Jepson</h4>

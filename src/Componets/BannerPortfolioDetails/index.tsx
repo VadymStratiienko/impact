@@ -77,7 +77,7 @@ const BannerPortfolioDetails = () => {
   return (
     <div>
       <PageHeader>
-        <ContainerBannerPortfolio>
+        <ContainerBannerPortfolio data-aos="fade-up">
           <Block>
             <Content>
               <h2>Portfolio Details</h2>
