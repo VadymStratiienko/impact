@@ -1,13 +1,13 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import { IoMdClose } from "react-icons/io";
-import styled from "styled-components";
-import Modal from "styled-react-modal";
-import FocusLock from "react-focus-lock";
-import { Container } from "../../Assets";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper';
+import { IoMdClose } from 'react-icons/io';
+import styled from 'styled-components';
+import Modal from 'styled-react-modal';
+import FocusLock from 'react-focus-lock';
+import { Container } from '../../Assets';
 
 const StyledModal = Modal.styled`
   width: 20rem;
@@ -115,22 +115,14 @@ const ModalImg = ({
         isOpen={isOpen}
         onEscapeKeydown={() => toggleModal()}
         aria-modal={true}
-        aria-labelledby="modal-label"
+        aria-labelledby='modal-label'
       >
         <FocusLock>
           <XIcon onClick={() => toggleModal()} />
           <ContainerModal>
-            <Swiper
-              navigation={true}
-              modules={[Navigation]}
-              className="ZoomSwiper"
-            >
+            <Swiper navigation={true} modules={[Navigation]} className='ZoomSwiper'>
               {filtered.map((item, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    {<img src={item.img} alt="" />}
-                  </SwiperSlide>
-                );
+                return <SwiperSlide key={index}>{<img src={item.img} alt='' />}</SwiperSlide>;
               })}
             </Swiper>
           </ContainerModal>

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
-import { portfolioData } from "../../data/portfolio";
-import ModalImg from "../Modal/ModalImg";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
+import { portfolioData } from '../../data/portfolio';
+import ModalImg from '../Modal/ModalImg';
 
 const Section = styled.section`
   background-color: #f6f6f6;
@@ -122,92 +122,83 @@ interface IProduct {
 const Portfolio = () => {
   const [filtered, setFiltered] = useState(portfolioData);
   const [toggleState, setToggleState] = useState(1);
-  const [clickedImg, setClickedImg] = useState<string[]| string | null | IProduct[]>(
-    null
-  );
+  const [clickedImg, setClickedImg] = useState<string[] | string | null | IProduct[]>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isOpen, setIsOpen] = useState(false);
-
 
   const handleClick = (index: number) => {
     setCurrentIndex(index);
     setIsOpen(true);
-    setClickedImg(filtered[0].img)
+    setClickedImg(filtered[0].img);
   };
-  
+
   const toggleTab = (index: number) => {
     setToggleState(index);
   };
 
   function filterCategories(category: string) {
-    if (category === "All") {
+    if (category === 'All') {
       setFiltered(portfolioData);
       toggleTab(1);
-    } else if (category === "App") {
-      let App = [...portfolioData].filter((item) => item.category === "App");
+    } else if (category === 'App') {
+      let App = [...portfolioData].filter((item) => item.category === 'App');
       setFiltered(App);
       toggleTab(2);
-    } else if (category === "Books") {
-      let Books = [...portfolioData].filter(
-        (item) => item.category === "Books"
-      );
+    } else if (category === 'Books') {
+      let Books = [...portfolioData].filter((item) => item.category === 'Books');
       setFiltered(Books);
       toggleTab(3);
-    } else if (category === "Branding") {
-      let Branding = [...portfolioData].filter(
-        (item) => item.category === "Branding"
-      );
+    } else if (category === 'Branding') {
+      let Branding = [...portfolioData].filter((item) => item.category === 'Branding');
       setFiltered(Branding);
       toggleTab(4);
-    } else if (category === "Product") {
-      let Product = [...portfolioData].filter(
-        (item) => item.category === "Product"
-      );
+    } else if (category === 'Product') {
+      let Product = [...portfolioData].filter((item) => item.category === 'Product');
       setFiltered(Product);
       toggleTab(5);
     }
   }
 
   return (
-    <Section id="portfolio">
-      <ConteinerPortfolio  data-aos="fade-up">
+    <Section id='portfolio'>
+      <ConteinerPortfolio data-aos='fade-up'>
         <SectionHeader>
           <h2>Portfolio</h2>
           <p>
-            Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum
-            nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti
+            Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit
+            qui ut et autem uia reprehenderit sunt deleniti
           </p>
         </SectionHeader>
 
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div data-aos='fade-up' data-aos-delay='100'>
           <Tabs>
             <li
-              className={toggleState === 1 ? " active-tabs" : ""}
-              onClick={() => filterCategories("All")}
+              className={toggleState === 1 ? ' active-tabs' : ''}
+              onClick={() => filterCategories('All')}
             >
               All
             </li>
             <li
-              className={toggleState === 2 ? "active-tabs" : ""}
-              onClick={() => filterCategories("App")}
+              className={toggleState === 2 ? 'active-tabs' : ''}
+              onClick={() => filterCategories('App')}
             >
               App
             </li>
             <li
-              className={toggleState === 3 ? "active-tabs" : ""}
-              onClick={() => filterCategories("Books")}
+              className={toggleState === 3 ? 'active-tabs' : ''}
+              onClick={() => filterCategories('Books')}
             >
               Books
             </li>
             <li
-              className={toggleState === 4 ? "active-tabs" : ""}
-              onClick={() => filterCategories("Branding")}
+              className={toggleState === 4 ? 'active-tabs' : ''}
+              onClick={() => filterCategories('Branding')}
             >
               Branding
             </li>
             <li
-              className={toggleState === 5 ? "active-tabs" : ""}
-              onClick={() => filterCategories("Product")}
+              className={toggleState === 5 ? 'active-tabs' : ''}
+              onClick={() => filterCategories('Product')}
             >
               Product
             </li>
@@ -217,14 +208,10 @@ const Portfolio = () => {
               return (
                 <PortfolioItem key={index}>
                   <PortfolioWrapp>
-                    <img
-                      src={item.img}
-                      alt=""
-                      onClick={() => handleClick(index)}
-                    />
+                    <img src={item.img} alt='' onClick={() => handleClick(index)} />
                     <Info>
                       <h4>
-                        <Link to="portfolio-details">{item.title}</Link>
+                        <Link to='portfolio-details'>{item.title}</Link>
                       </h4>
                       <p>{item.text}</p>
                     </Info>
@@ -233,13 +220,7 @@ const Portfolio = () => {
               );
             })}
 
-            {isOpen && (
-              <ModalImg
-              filtered={filtered}
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}
-              />
-            )}
+            {isOpen && <ModalImg filtered={filtered} isOpen={isOpen} setIsOpen={setIsOpen} />}
           </WrapperPortfolio>
         </div>
       </ConteinerPortfolio>

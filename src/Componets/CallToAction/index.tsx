@@ -1,42 +1,38 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import Cta from "../../Assets/img/cta-bg.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import Cta from '../../Assets/img/cta-bg.jpg';
 
 const ContainerAction = styled(Container)`
-    display: block;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${Cta}') ;
-    background-size: cover;
-    padding: 100px 60px;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center!important;
-    h3 {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-p {
-  color: #fff;
-  margin-bottom: 20px;
-}
-  
+  display: block;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${Cta}');
+  background-size: cover;
+  padding: 100px 60px;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center !important;
+  h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #fff;
+    margin-bottom: 20px;
+  }
 `;
 const BtnPlay = styled.a`
   width: 94px;
   height: 94px;
   margin-bottom: 20px;
-  background: radial-gradient(
-    var(--color-primary) 50%,
-    rgba(0, 131, 116, 0.4) 52%
-  );
+  background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
   border-radius: 50%;
   display: inline-block;
   position: relative;
   overflow: hidden;
   ::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 120px;
     height: 120px;
@@ -58,7 +54,7 @@ const BtnPlay = styled.a`
     background: rgba(198, 16, 0, 0);
   }
   ::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
@@ -72,7 +68,7 @@ const BtnPlay = styled.a`
     transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   :hover::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 50%;
     top: 50%;
@@ -127,16 +123,15 @@ const CtaBtn = styled.a`
 const CallToAction = () => {
   return (
     <section>
-      <ContainerAction data-aos="zoom-out">
-        <BtnPlay href=""></BtnPlay>
+      <ContainerAction data-aos='zoom-out'>
+        <BtnPlay href=''></BtnPlay>
         <h3>Call To Action</h3>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
         </p>
-        <CtaBtn href="">Call To Action</CtaBtn>
+        <CtaBtn href=''>Call To Action</CtaBtn>
       </ContainerAction>
     </section>
   );

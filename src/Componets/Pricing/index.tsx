@@ -1,9 +1,9 @@
-import React from "react";
-import { BsBox, BsCheck, BsX } from "react-icons/bs";
-import { FiSend } from "react-icons/fi";
-import { MdOutlineAirplanemodeActive } from "react-icons/md";
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
+import React from 'react';
+import { BsBox, BsCheck, BsX } from 'react-icons/bs';
+import { FiSend } from 'react-icons/fi';
+import { MdOutlineAirplanemodeActive } from 'react-icons/md';
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
 
 const Section = styled.section`
   background-color: #f6f6f6;
@@ -111,7 +111,7 @@ const BlockIcon = styled.div`
   transform-style: preserve-3d;
   ::before {
     position: absolute;
-    content: "";
+    content: '';
     height: 86px;
     width: 86px;
     border-radius: 50%;
@@ -121,7 +121,7 @@ const BlockIcon = styled.div`
   }
   ::after {
     position: absolute;
-    content: "";
+    content: '';
     height: 102px;
     width: 102px;
     border-radius: 50%;
@@ -180,15 +180,15 @@ const X = styled(BsX)`
 const Pricing = () => {
   return (
     <Section>
-      <ContainerPrice data-aos="fade-up">
+      <ContainerPrice data-aos='fade-up'>
         <SectionHeader>
           <h2>Pricing</h2>
           <p>
-            Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro
-            incidunt dolores placeat sunt id nobis omnis tiledo stran delop
+            Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores
+            placeat sunt id nobis omnis tiledo stran delop
           </p>
         </SectionHeader>
-        <Prices  data-aos="zoom-out" data-aos-delay="100">
+        <Prices data-aos='zoom-out' data-aos-delay='100'>
           <BlockPrice>
             <PricingItem>
               <h3>Free Plan</h3>
@@ -211,22 +211,22 @@ const Pricing = () => {
                   <Check />
                   Nulla at volutpat diam uteera
                 </li>
-                <li className="na">
+                <li className='na'>
                   <X />
                   <span>Massa ultricies mi quis hendrerit</span>
                 </li>
-                <li className="na">
+                <li className='na'>
                   <X />
                   <span>Massa ultricies mi quis hendrerit</span>
                 </li>
               </ul>
               <BlockBtn>
-                <a href="">Buy Now</a>
+                <a href=''>Buy Now</a>
               </BlockBtn>
             </PricingItem>
           </BlockPrice>
           <BlockPrice>
-            <PricingItem className="featured">
+            <PricingItem className='featured'>
               <h3>Business Plan</h3>
               <BlockIcon>
                 <OutlineAirplanemodeActive />
@@ -257,7 +257,7 @@ const Pricing = () => {
                 </li>
               </ul>
               <BlockBtn>
-                <a href="">Buy Now</a>
+                <a href=''>Buy Now</a>
               </BlockBtn>
             </PricingItem>
           </BlockPrice>
@@ -293,7 +293,7 @@ const Pricing = () => {
                 </li>
               </ul>
               <BlockBtn>
-                <a href="">Buy Now</a>
+                <a href=''>Buy Now</a>
               </BlockBtn>
             </PricingItem>
           </BlockPrice>

@@ -5,9 +5,9 @@ import {
   BsFacebook,
   BsInstagram,
   BsLinkedin,
-} from "react-icons/bs";
-import styled from "styled-components";
-import { Container } from "../../Assets";
+} from 'react-icons/bs';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
 
 const ContainerTopBar = styled.section`
   background: #00796b;
@@ -68,22 +68,22 @@ const Topbar = () => {
       <Container>
         <ContactInfo>
           <Envelope />
-          <a href="mailto:contact@example.com">contact@example.com</a>
+          <a href='mailto:contact@example.com'>contact@example.com</a>
 
           <Phone />
           <span>+1 5589 55488 55</span>
         </ContactInfo>
         <Socials>
-          <a href="#">
+          <a href='#'>
             <BsTwitter />
           </a>
-          <a href="#">
+          <a href='#'>
             <BsFacebook />
           </a>
-          <a href="#">
+          <a href='#'>
             <BsInstagram />
           </a>
-          <a href="#">
+          <a href='#'>
             <BsLinkedin />
           </a>
         </Socials>

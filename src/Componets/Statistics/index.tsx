@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import StatsImg from "../../Assets/img/stats-img.svg";
-import CountUp from "react-countup";
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import StatsImg from '../../Assets/img/stats-img.svg';
+import CountUp from 'react-countup';
 
 const StatsCounter = styled.section`
   padding: 40px 0;
@@ -63,19 +63,18 @@ const ItemStats = styled.div`
 const Stats = () => {
   return (
     <StatsCounter>
-      <ContainerStats data-aos="fade-up">
+      <ContainerStats data-aos='fade-up'>
         <Contents>
           <Block>
-            <img src={StatsImg} alt="" />
+            <img src={StatsImg} alt='' />
           </Block>
           <Block>
-            <ItemStats data-aos="fade-up">
+            <ItemStats data-aos='fade-up'>
               <span>
                 <CountUp start={100} end={232} duration={5} />
               </span>
               <p>
-                <strong>Happy Clients</strong> consequuntur quae diredo para
-                mesta
+                <strong>Happy Clients</strong> consequuntur quae diredo para mesta
               </p>
             </ItemStats>
             <ItemStats>

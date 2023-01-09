@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import Sidebar from "../Sidebar";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
+import { Container } from '../../Assets';
+
+import Sidebar from '../Sidebar';
 
 const HeaderContainer = styled.header<{ isScrolled: boolean }>`
   transition: all 0.5s;
@@ -14,13 +16,12 @@ const HeaderContainer = styled.header<{ isScrolled: boolean }>`
   margin-right: auto;
   display: flex;
   align-items: center;
-  position: ${({ isScrolled }) => isScrolled && "fixed"};
+  position: ${({ isScrolled }) => isScrolled && 'fixed'};
   top: 0;
   right: 0;
   left: 0;
-  height: ${({ isScrolled }) => isScrolled && "70px"};
-  box-shadow: ${({ isScrolled }) =>
-    isScrolled ? " 0px 2px 20px rgb(0 0 0 / 10%)" : ""};
+  height: ${({ isScrolled }) => isScrolled && '70px'};
+  box-shadow: ${({ isScrolled }) => (isScrolled ? ' 0px 2px 20px rgb(0 0 0 / 10%)' : '')};
 `;
 const Logo = styled(Link)`
   display: flex;
@@ -77,7 +78,7 @@ const Navbar = styled.nav`
       position: relative;
     }
     ul > li > a::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 2px;
@@ -119,19 +120,19 @@ const StyledBurger = styled.div<{ open: boolean }>`
   div {
     width: 28px;
     height: 2px;
-    background-color: ${({ open }) => (open ? "#ccc" : "#ffffff")};
+    background-color: ${({ open }) => (open ? '#ccc' : '#ffffff')};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      transform: ${({ open }) => (open ? 'translateX(100%)' : 'translateX(0)')};
       opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
     }
   }
 `;
@@ -143,31 +144,9 @@ interface Iroutes {
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
-
-  let navbarlinks = document.querySelectorAll("#navbar a");
-
-  useEffect(() => {
-    function navbarlinksActive() {
-      navbarlinks.forEach((navbarlink: any) => {
-        if (!navbarlink.hash) return;
-
-        let section = document.querySelector(navbarlink.hash);
-        if (!section) return;
-
-        let position = window.scrollY + 200;
-
-        if (
-          position >= section.offsetTop &&
-          position <= section.offsetTop + section.offsetHeight
-        ) {
-          navbarlink.classList.add("active");
-        } else {
-          navbarlink.classList.remove("active");
-        }
-      });
-    }
-    document.addEventListener("scroll", navbarlinksActive);
-  }, [navbarlinks]);
+  const { ref } = useInView({
+    threshold: 0,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -178,58 +157,58 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const routes: Iroutes[] = [
     {
-      link: "#hero",
-      title: "Home",
+      link: '#hero',
+      title: 'Home',
     },
     {
-      link: "#about",
-      title: "About",
+      link: '#about',
+      title: 'About',
     },
     {
-      link: "#services",
-      title: "Services",
+      link: '#services',
+      title: 'Services',
     },
     {
-      link: "#portfolio",
-      title: "Portfolio",
+      link: '#portfolio',
+      title: 'Portfolio',
     },
     {
-      link: "#team",
-      title: "Team",
+      link: '#team',
+      title: 'Team',
     },
     {
-      link: "blog",
-      title: "Blog",
+      link: 'blog',
+      title: 'Blog',
     },
     {
-      link: "#contact",
-      title: "Contact",
+      link: '#contact',
+      title: 'Contact',
     },
   ];
 
   return (
     <HeaderContainer isScrolled={isScrolled}>
       <ContainerNav>
-        <Logo to="/">
+        <Logo to='/'>
           <h1>
             Impact<span>.</span>
           </h1>
         </Logo>
-        <Navbar id="navbar">
+        <Navbar id='navbar'>
           <ul>
             {routes.map((item, index) => {
               return (
                 <li key={index}>
-                  <a href={item.link} onClick={() => setOpen(!open)}>
+                  <a href={item.link} onClick={() => setOpen(!open)} ref={ref}>
                     {item.title}
                   </a>
                 </li>
@@ -237,11 +216,7 @@ const Header = () => {
             })}
           </ul>
         </Navbar>
-        <StyledBurger
-          open={open}
-          onClick={() => setOpen(!open)}
-          style={{ marginLeft: "20px" }}
-        >
+        <StyledBurger open={open} onClick={() => setOpen(!open)} style={{ marginLeft: '20px' }}>
           <div />
           <div />
           <div />

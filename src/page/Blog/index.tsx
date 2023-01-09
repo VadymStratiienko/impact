@@ -1,6 +1,6 @@
-import React from "react";
-import BannerBlog from "../../Componets/BannerBlog";
-import LandingBlog from "../../Componets/LandingBlog";
+import React from 'react';
+import BannerBlog from '../../Componets/BannerBlog';
+import LandingBlog from '../../Componets/LandingBlog';
 
 const Blog = () => {
   return (

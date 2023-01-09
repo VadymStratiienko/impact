@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
-import AboutImg from "../../Assets/img/about.jpg";
-import AboutImg_2 from "../../Assets/img/about-2.jpg";
-import { BsCheckCircleFill } from "react-icons/bs";
-import ModalVideo from "../Modal/ModalVideo";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
+import AboutImg from '../../Assets/img/about.jpg';
+import AboutImg_2 from '../../Assets/img/about-2.jpg';
+import { BsCheckCircleFill } from 'react-icons/bs';
+import ModalVideo from '../Modal/ModalVideo';
 
 const ContainerAbout = styled(Container)`
   display: flex;
@@ -80,10 +80,7 @@ const BlockVideo = styled.div`
   a {
     width: 94px;
     height: 94px;
-    background: radial-gradient(
-      var(--color-primary) 50%,
-      rgba(0, 131, 116, 0.4) 52%
-    );
+    background: radial-gradient(var(--color-primary) 50%, rgba(0, 131, 116, 0.4) 52%);
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -91,7 +88,7 @@ const BlockVideo = styled.div`
     top: calc(50% - 47px);
     overflow: hidden;
     ::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 120px;
       height: 120px;
@@ -113,7 +110,7 @@ const BlockVideo = styled.div`
       background: rgba(198, 16, 0, 0);
     }
     ::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 50%;
       top: 50%;
@@ -127,7 +124,7 @@ const BlockVideo = styled.div`
       transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
     :hover::before {
-      content: "";
+      content: '';
       position: absolute;
       left: 50%;
       top: 50%;
@@ -176,37 +173,36 @@ const BlockVideo = styled.div`
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section id="about">
-      <ContainerAbout data-aos="fade-up">
+    <section id='about'>
+      <ContainerAbout data-aos='fade-up'>
         <SectionHeader>
           <h2>About Us</h2>
           <p>
-            Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro
-            incidunt dolores placeat sunt id nobis omnis tiledo stran delop
+            Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores
+            placeat sunt id nobis omnis tiledo stran delop
           </p>
         </SectionHeader>
         <Contents>
           <Block>
             <h3>Voluptatem dignissimos provident quasi corporis</h3>
-            <img src={AboutImg} alt="" />
+            <img src={AboutImg} alt='' />
             <p>
-              Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis
-              quod nisi et. Placeat debitis quia recusandae odit et consequatur
-              voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.
+              Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et.
+              Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur
+              consectetur fugiat voluptas ea.
             </p>
             <p>
-              Temporibus nihil enim deserunt sed ea. Provident sit expedita aut
-              cupiditate nihil vitae quo officia vel. Blanditiis eligendi
-              possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut
-              repellendus nobis tempore doloribus debitis explicabo similique
+              Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil
+              vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem
+              veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique
               sit. Accusantium sed ut omnis beatae neque deleniti repellendus.
             </p>
           </Block>
           <Block>
             <Content>
-              <p className="italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <p className='italic'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
               </p>
               <ul>
                 <li>
@@ -219,19 +215,18 @@ const About = () => {
                 </li>
                 <li>
                   <CheckCircleFill />
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                  aute irure dolor in reprehenderit in voluptate trideta
-                  storacalaperda mastiro dolore eu fugiat nulla pariatur.
+                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
+                  pariatur.
                 </li>
               </ul>
               <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident
               </p>
               <BlockVideo>
-                <img src={AboutImg_2} alt="" />
+                <img src={AboutImg_2} alt='' />
                 <BtnVideo onClick={() => setIsOpen(true)}></BtnVideo>
                 {isOpen && <ModalVideo isOpen={isOpen} setIsOpen={setIsOpen} />}
               </BlockVideo>

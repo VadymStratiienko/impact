@@ -1,8 +1,8 @@
-import Modal from "styled-react-modal";
-import FocusLock from "react-focus-lock";
-import ReactPlayer from "react-player";
-import styled from "styled-components";
-import { IoMdClose } from "react-icons/io";
+import Modal from 'styled-react-modal';
+import FocusLock from 'react-focus-lock';
+import ReactPlayer from 'react-player';
+import styled from 'styled-components';
+import { IoMdClose } from 'react-icons/io';
 
 const StyledModal = Modal.styled`
 position: relative;
@@ -44,16 +44,16 @@ function ModalVideo({ setIsOpen, isOpen }: IModal) {
         isOpen={isOpen}
         onEscapeKeydown={() => toggleModal()}
         aria-modal={true}
-        aria-labelledby="modal-label"
+        aria-labelledby='modal-label'
       >
         <FocusLock>
           <XIcon onClick={() => toggleModal()} />
 
           <ReactPlayerStyles
-            width="100%"
-            height="100%"
+            width='100%'
+            height='100%'
             controls={true}
-            url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            url='https://www.youtube.com/watch?v=LXb3EKWsInQ'
           />
         </FocusLock>
       </StyledModal>

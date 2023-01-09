@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { Container } from "../../Assets";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { Container } from '../../Assets';
 
 const PageHeader = styled.div`
   padding: 60px 0 60px 0;
@@ -68,7 +68,7 @@ const Navigate = styled.div`
     display: inline-block;
     padding-right: 10px;
     color: var(--color-secondary);
-    content: "/";
+    content: '/';
   }
 `;
 
@@ -81,10 +81,9 @@ const BannerBlog = () => {
             <Content>
               <h2>Blog</h2>
               <p>
-                Odio et unde deleniti. Deserunt numquam exercitationem. Officiis
-                quo odio sint voluptas consequatur ut a odio voluptatem. Sit
-                dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit
-                quaerat ipsum dolorem.
+                Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint
+                voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus
+                dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.
               </p>
             </Content>
           </Block>
@@ -94,7 +93,7 @@ const BannerBlog = () => {
         <Container>
           <ol>
             <li>
-              <Link to="/">Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>Blog</li>
           </ol>

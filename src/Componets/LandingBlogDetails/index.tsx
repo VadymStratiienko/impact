@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import BlogImg from "../../Assets/img/blog/blog-1.jpg";
-import BlogInsidePost from "../../Assets/img/blog/blog-inside-post.jpg";
-import BlogAuthor from "../../Assets/img/blog/blog-author.jpg";
-import Comments_1 from "../../Assets/img/blog/comments-1.jpg";
-import Comments_2 from "../../Assets/img/blog/comments-2.jpg";
-import Comments_3 from "../../Assets/img/blog/comments-3.jpg";
-import Comments_4 from "../../Assets/img/blog/comments-4.jpg";
-import Comments_5 from "../../Assets/img/blog/comments-5.jpg";
-import Comments_6 from "../../Assets/img/blog/comments-6.jpg";
-import { recentPosts } from "../../data/RecentPosts";
+import React from 'react';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import BlogImg from '../../Assets/img/blog/blog-1.jpg';
+import BlogInsidePost from '../../Assets/img/blog/blog-inside-post.jpg';
+import BlogAuthor from '../../Assets/img/blog/blog-author.jpg';
+import Comments_1 from '../../Assets/img/blog/comments-1.jpg';
+import Comments_2 from '../../Assets/img/blog/comments-2.jpg';
+import Comments_3 from '../../Assets/img/blog/comments-3.jpg';
+import Comments_4 from '../../Assets/img/blog/comments-4.jpg';
+import Comments_5 from '../../Assets/img/blog/comments-5.jpg';
+import Comments_6 from '../../Assets/img/blog/comments-6.jpg';
+import { recentPosts } from '../../data/RecentPosts';
 
 const ContainerBlog = styled(Container)`
   display: block;
@@ -113,7 +113,7 @@ const Content = styled.div`
       font-weight: 500;
       font-size: 22px;
       ::after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         top: 0;
@@ -169,7 +169,7 @@ const MetaBottom = styled.div`
   .tags li + li::before {
     padding-right: 6px;
     color: var(--color-default);
-    content: ",";
+    content: ',';
   }
 `;
 const PostAuthor = styled.div`
@@ -286,8 +286,8 @@ const Row = styled.div`
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
   }
-  input[type="text"],
-  [type="email"] {
+  input[type='text'],
+  [type='email'] {
     padding: 12px 15px;
     border-radius: 0;
     box-shadow: none;
@@ -304,8 +304,8 @@ const Row = styled.div`
     margin: 0;
     font-family: inherit;
   }
-  input[type="text"]:focus,
-  input[type="email"]:focus,
+  input[type='text']:focus,
+  input[type='email']:focus,
   textarea:focus {
     border-color: var(--color-primary);
   }
@@ -380,7 +380,7 @@ const SearchForm = styled.form`
   position: relative;
   border-radius: 50px;
   margin-top: 1rem !important;
-  input[type="text"] {
+  input[type='text'] {
     border: 0;
     padding: 4px;
     border-radius: 50px;
@@ -507,144 +507,130 @@ const Tags = styled.div`
 const LandingBlogDetails = () => {
   return (
     <section>
-      <ContainerBlog  data-aos="fade-up">
+      <ContainerBlog data-aos='fade-up'>
         <Contents>
           <Post>
             <BlogDetails>
               <PostImg>
-                <img src={BlogImg} alt="" />
+                <img src={BlogImg} alt='' />
               </PostImg>
-              <h2>
-                Dolorum optio tempore voluptas dignissimos cumque fuga qui
-                quibusdam quia
-              </h2>
+              <h2>Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h2>
               <MetaTop>
                 <ul>
                   <li>
-                    <i className="bi bi-person"></i>
-                    <a href="#">John Doe</a>
+                    <i className='bi bi-person'></i>
+                    <a href='#'>John Doe</a>
                   </li>
                   <li>
-                    <i className="bi bi-clock"></i>
-                    <a href="#">
+                    <i className='bi bi-clock'></i>
+                    <a href='#'>
                       <time>Jan 1, 2022</time>
                     </a>
                   </li>
                   <li>
-                    <i className="bi bi-chat-dots"></i>
-                    <a href="#">12 Comments</a>
+                    <i className='bi bi-chat-dots'></i>
+                    <a href='#'>12 Comments</a>
                   </li>
                 </ul>
               </MetaTop>
               <Content>
                 <p>
-                  Similique neque nam consequuntur ad non maxime aliquam quas.
-                  Quibusdam animi praesentium. Aliquam et laboriosam eius aut
-                  nostrum quidem aliquid dicta. Et eveniet enim. Qui velit est
-                  ea dolorem doloremque deleniti aperiam unde soluta. Est cum et
-                  quod quos aut ut et sit sunt. Voluptate porro consequatur
-                  assumenda perferendis dolore.
+                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi
+                  praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta. Et
+                  eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta.
+                  Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda
+                  perferendis dolore.
                 </p>
                 <p>
-                  Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non
-                  reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi
-                  numquam nihil cumque odio. Et voluptate cupiditate.
+                  Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in
+                  accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate
+                  cupiditate.
                 </p>
                 <blockquote>
                   <p>
-                    Et vero doloremque tempore voluptatem ratione vel aut.
-                    Deleniti sunt animi aut. Aut eos aliquam doloribus minus
-                    autem quos.
+                    Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut.
+                    Aut eos aliquam doloribus minus autem quos.
                   </p>
                 </blockquote>
                 <p>
-                  Sed quo laboriosam qui architecto. Occaecati repellendus omnis
-                  dicta inventore tempore provident voluptas mollitia aliquid.
-                  Id repellendus quia. Asperiores nihil magni dicta est suscipit
-                  perspiciatis. Voluptate ex rerum assumenda dolores nihil
-                  quaerat. Dolor porro tempora et quibusdam voluptas. Beatae aut
-                  at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum
-                  exercitationem harum qui qui blanditiis neque. Iusto autem
-                  itaque. Repudiandae hic quae aspernatur ea neque qui.
-                  Architecto voluptatem magni. Vel magnam quod et tempora
-                  deleniti error rerum nihil tempora.
+                  Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore
+                  tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores
+                  nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores
+                  nihil quaerat. Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui
+                  tempore corrupti velit quisquam rerum. Omnis dolorum exercitationem harum qui qui
+                  blanditiis neque. Iusto autem itaque. Repudiandae hic quae aspernatur ea neque
+                  qui. Architecto voluptatem magni. Vel magnam quod et tempora deleniti error rerum
+                  nihil tempora.
                 </p>
                 <h3>Et quae iure vel ut odit alias.</h3>
                 <p>
-                  Officiis animi maxime nulla quo et harum eum quis a. Sit hic
-                  in qui quos fugit ut rerum atque. Optio provident dolores
-                  atque voluptatem rem excepturi molestiae qui. Voluptatem
-                  laborum omnis ullam quibusdam perspiciatis nulla nostrum.
-                  Voluptatum est libero eum nesciunt aliquid qui. Quia et
-                  suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt
-                  accusamus quia aut ratione aspernatur dolor. Sint harum
-                  eveniet dicta exercitationem minima. Exercitationem omnis
-                  asperiores natus aperiam dolor consequatur id ex sed.
-                  Quibusdam rerum dolores sint consequatur quidem ea. Beatae
-                  minima sunt libero soluta sapiente in rem assumenda. Et qui
-                  odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus
+                  Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut
+                  rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae
+                  qui. Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum.
+                  Voluptatum est libero eum nesciunt aliquid qui. Quia et suscipit non sequi.
+                  Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut ratione aspernatur
+                  dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem omnis
+                  asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores
+                  sint consequatur quidem ea. Beatae minima sunt libero soluta sapiente in rem
+                  assumenda. Et qui odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus
                   mollitia aut atque aut.
                 </p>
-                <img src={BlogInsidePost} alt="" />
+                <img src={BlogInsidePost} alt='' />
                 <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
                 <p>
-                  Rerum ea est assumenda pariatur quasi et quam. Facilis nam
-                  porro amet nostrum. In assumenda quia quae a id praesentium.
-                  Quos deleniti libero sed occaecati aut porro autem.
-                  Consectetur sed excepturi sint non placeat quia repellat
-                  incidunt labore. Autem facilis hic dolorum dolores vel.
-                  Consectetur quasi id et optio praesentium aut asperiores eaque
-                  aut. Explicabo omnis quibusdam esse. Ex libero illum iusto
-                  totam et ut aut blanditiis. Veritatis numquam ut illum ut a
-                  quam vitae.
+                  Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In
+                  assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut
+                  porro autem. Consectetur sed excepturi sint non placeat quia repellat incidunt
+                  labore. Autem facilis hic dolorum dolores vel. Consectetur quasi id et optio
+                  praesentium aut asperiores eaque aut. Explicabo omnis quibusdam esse. Ex libero
+                  illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam
+                  vitae.
                 </p>
                 <p>
-                  Alias quia non aliquid. Eos et ea velit. Voluptatem maxime
-                  enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia
-                  nisi asperiores est veniam.
+                  Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa
+                  voluptas incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
                 </p>
               </Content>
               <MetaBottom>
-                <i className="bi bi-folder"></i>{" "}
-                <ul className="cats">
+                <i className='bi bi-folder'></i>{' '}
+                <ul className='cats'>
                   <li>
-                    <a href="#">Business</a>
+                    <a href='#'>Business</a>
                   </li>
                 </ul>
-                <i className="bi bi-tags"></i>{" "}
-                <ul className="tags">
+                <i className='bi bi-tags'></i>{' '}
+                <ul className='tags'>
                   <li>
-                    <a href="">Creative</a>
+                    <a href=''>Creative</a>
                   </li>
                   <li>
-                    <a href="">Tips</a>
+                    <a href=''>Tips</a>
                   </li>
                   <li>
-                    <a href="">Marketing</a>
+                    <a href=''>Marketing</a>
                   </li>
                 </ul>
               </MetaBottom>
             </BlogDetails>
             <PostAuthor>
-              <img src={BlogAuthor} alt="" />
+              <img src={BlogAuthor} alt='' />
               <div>
                 <h4>Jane Smith</h4>
                 <SocialLinks>
-                  <a href="https://twitters.com/#">
-                    <i className="bi bi-twitter"></i>
+                  <a href='https://twitters.com/#'>
+                    <i className='bi bi-twitter'></i>
                   </a>
-                  <a href="https://facebook.com/#">
-                    <i className="bi bi-facebook"></i>
+                  <a href='https://facebook.com/#'>
+                    <i className='bi bi-facebook'></i>
                   </a>
-                  <a href="https://instagram.com/#">
-                    <i className="biu bi-instagram"></i>
+                  <a href='https://instagram.com/#'>
+                    <i className='biu bi-instagram'></i>
                   </a>
                 </SocialLinks>
                 <p>
-                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum
-                  sed possimus accusantium. Quas repellat voluptatem officia
-                  numquam sint aspernatur voluptas. Esse et accusantium ut unde
-                  voluptas.
+                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus
+                  accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas.
+                  Esse et accusantium ut unde voluptas.
                 </p>
               </div>
             </PostAuthor>
@@ -653,22 +639,21 @@ const LandingBlogDetails = () => {
               <Comment>
                 <BlockComment>
                   <CommentImg>
-                    <img src={Comments_1} alt="" />
+                    <img src={Comments_1} alt='' />
                   </CommentImg>
                   <div>
                     <h5>
-                      <a href="">Georgia Reader</a>
-                      <a href="#" className="reply">
-                        <i className="bi bi-reply-fill"></i> Reply
+                      <a href=''>Georgia Reader</a>
+                      <a href='#' className='reply'>
+                        <i className='bi bi-reply-fill'></i> Reply
                       </a>
                     </h5>
                     <time>01 Jan,2022</time>
                     <p>
-                      {" "}
-                      Et rerum totam nisi. Molestiae vel quam dolorum vel
-                      voluptatem et et. Est ad aut sapiente quis molestiae est
-                      qui cum soluta. Vero aut rerum vel. Rerum quos laboriosam
-                      placeat ex qui. Sint qui facilis et.
+                      {' '}
+                      Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad
+                      aut sapiente quis molestiae est qui cum soluta. Vero aut rerum vel. Rerum
+                      quos laboriosam placeat ex qui. Sint qui facilis et.
                     </p>
                   </div>
                 </BlockComment>
@@ -676,51 +661,48 @@ const LandingBlogDetails = () => {
               <Comment>
                 <BlockComment>
                   <CommentImg>
-                    <img src={Comments_2} alt="" />
+                    <img src={Comments_2} alt='' />
                   </CommentImg>
                   <div>
                     <h5>
-                      <a href="#">Aron Alvarado</a>
-                      <a href="#" className="reply">
-                        <i className="bi bi-reply-fill"></i> Reply
+                      <a href='#'>Aron Alvarado</a>
+                      <a href='#' className='reply'>
+                        <i className='bi bi-reply-fill'></i> Reply
                       </a>
                     </h5>
                     <time>01 Jan,2022</time>
                     <p>
-                      {" "}
-                      Ipsam tempora sequi voluptatem quis sapiente non. Autem
-                      itaque eveniet saepe. Officiis illo ut beatae.
+                      {' '}
+                      Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe.
+                      Officiis illo ut beatae.
                     </p>
                   </div>
                 </BlockComment>
                 <CommentRely>
                   <BlockComment>
                     <CommentImg>
-                      <img src={Comments_3} alt="" />
+                      <img src={Comments_3} alt='' />
                     </CommentImg>
                     <div>
                       <h5>
-                        <a href="#">Lynda Small</a>
-                        <a href="#" className="reply">
-                          <i className="bi bi-reply-fill"></i> Reply
+                        <a href='#'>Lynda Small</a>
+                        <a href='#' className='reply'>
+                          <i className='bi bi-reply-fill'></i> Reply
                         </a>
                       </h5>
                       <time>01 Jan,2022</time>
                       <p>
-                        {" "}
-                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo
-                        dicta. Est ullam aspernatur ut vitae quia mollitia id
-                        non. Qui ad quas nostrum rerum sed necessitatibus aut
-                        est. Eum officiis sed repellat maxime vero nisi natus.
-                        Amet nesciunt nesciunt qui illum omnis est et dolor
-                        recusandae. Recusandae sit ad aut impedit et. Ipsa
-                        labore dolor impedit et natus in porro aut. Magnam qui
-                        cum. Illo similique occaecati nihil modi eligendi.
-                        Pariatur distinctio labore omnis incidunt et illum.
-                        Expedita et dignissimos distinctio laborum minima
-                        fugiat. Libero corporis qui. Nam illo odio beatae enim
-                        ducimus. Harum reiciendis error dolorum non autem
-                        quisquam vero rerum neque.
+                        {' '}
+                        Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam
+                        aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed
+                        necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus.
+                        Amet nesciunt nesciunt qui illum omnis est et dolor recusandae. Recusandae
+                        sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut.
+                        Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur
+                        distinctio labore omnis incidunt et illum. Expedita et dignissimos
+                        distinctio laborum minima fugiat. Libero corporis qui. Nam illo odio beatae
+                        enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum
+                        neque.
                       </p>
                     </div>
                   </BlockComment>
@@ -728,23 +710,22 @@ const LandingBlogDetails = () => {
                 <CommentRely>
                   <BlockComment>
                     <CommentImg>
-                      <img src={Comments_4} alt="" />
+                      <img src={Comments_4} alt='' />
                     </CommentImg>
                     <div>
                       <h5>
-                        <a href="#">Sianna Ramsay</a>
-                        <a href="#" className="reply">
-                          <i className="bi bi-reply-fill"></i> Reply
+                        <a href='#'>Sianna Ramsay</a>
+                        <a href='#' className='reply'>
+                          <i className='bi bi-reply-fill'></i> Reply
                         </a>
                       </h5>
                       <time>01 Jan,2022</time>
                       <p>
-                        {" "}
-                        Et dignissimos impedit nulla et quo distinctio ex nemo.
-                        Omnis quia dolores cupiditate et. Ut unde qui eligendi
-                        sapiente omnis ullam. Placeat porro est commodi est
-                        officiis voluptas repellat quisquam possimus.
-                        Perferendis id consectetur necessitatibus.
+                        {' '}
+                        Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores
+                        cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est
+                        commodi est officiis voluptas repellat quisquam possimus. Perferendis id
+                        consectetur necessitatibus.
                       </p>
                     </div>
                   </BlockComment>
@@ -753,26 +734,24 @@ const LandingBlogDetails = () => {
               <Comment>
                 <BlockComment>
                   <CommentImg>
-                    <img src={Comments_5} alt="" />
+                    <img src={Comments_5} alt='' />
                   </CommentImg>
                   <div>
                     <h5>
-                      <a href="">Nolan Davidson</a>
-                      <a href="#" className="reply">
-                        <i className="bi bi-reply-fill"></i> Reply
+                      <a href=''>Nolan Davidson</a>
+                      <a href='#' className='reply'>
+                        <i className='bi bi-reply-fill'></i> Reply
                       </a>
                     </h5>
                     <time>01 Jan,2022</time>
                     <p>
-                      {" "}
-                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis
-                      eius repellendus quia nihil ut accusantium tempore.
-                      Nesciunt expedita id dolor exercitationem aspernatur aut
-                      quam ut. Voluptatem est accusamus iste at. Non aut et et
-                      esse qui sit modi neque. Exercitationem et eos aspernatur.
-                      Ea est consequuntur officia beatae ea aut eos soluta. Non
-                      qui dolorum voluptatibus et optio veniam. Quam officia sit
-                      nostrum dolorem.
+                      {' '}
+                      Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia
+                      nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem
+                      aspernatur aut quam ut. Voluptatem est accusamus iste at. Non aut et et esse
+                      qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur
+                      officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio
+                      veniam. Quam officia sit nostrum dolorem.
                     </p>
                   </div>
                 </BlockComment>
@@ -780,59 +759,45 @@ const LandingBlogDetails = () => {
               <Comment>
                 <BlockComment>
                   <CommentImg>
-                    <img src={Comments_6} alt="" />
+                    <img src={Comments_6} alt='' />
                   </CommentImg>
                   <div>
                     <h5>
-                      <a href="">Kay Duggan</a>
-                      <a href="#" className="reply">
-                        <i className="bi bi-reply-fill"></i> Reply
+                      <a href=''>Kay Duggan</a>
+                      <a href='#' className='reply'>
+                        <i className='bi bi-reply-fill'></i> Reply
                       </a>
                     </h5>
                     <time>01 Jan,2022</time>
                     <p>
-                      {" "}
-                      Dolorem atque aut. Omnis doloremque blanditiis quia eum
-                      porro quis ut velit tempore. Cumque sed quia ut maxime.
-                      Est ad aut cum. Ut exercitationem non in fugiat.
+                      {' '}
+                      Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit
+                      tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in
+                      fugiat.
                     </p>
                   </div>
                 </BlockComment>
               </Comment>
               <ReplyForm>
                 <h4>Leave a Reply</h4>
-                <p>
-                  Your email address will not be published. Required fields are
-                  marked *
-                </p>
-                <form action="">
+                <p>Your email address will not be published. Required fields are marked *</p>
+                <form action=''>
                   <Row>
                     <FormGroup>
-                      <input type="text" name="name" placeholder="Your Name*" />
+                      <input type='text' name='name' placeholder='Your Name*' />
                     </FormGroup>
                     <FormGroup>
-                      <input
-                        type="text"
-                        name="email"
-                        placeholder="Your Email*"
-                      />
+                      <input type='text' name='email' placeholder='Your Email*' />
                     </FormGroup>
                   </Row>
                   <Row>
                     <FormGroupWebsite>
-                      <input
-                        type="text"
-                        name="website"
-                        placeholder="Your Website"
-                      />
+                      <input type='text' name='website' placeholder='Your Website' />
                     </FormGroupWebsite>
                   </Row>
                   <Row>
                     <FormGroupWebsite>
-                      <textarea
-                        name="comment"
-                        placeholder="Your Comment*"
-                      ></textarea>
+                      <textarea name='comment' placeholder='Your Comment*'></textarea>
                     </FormGroupWebsite>
                   </Row>
                   <Button>Post Comment</Button>
@@ -844,10 +809,10 @@ const LandingBlogDetails = () => {
             <Sidebar>
               <div>
                 <SidebarTitle>Search</SidebarTitle>
-                <SearchForm action="">
-                  <input type="text" />
-                  <ButtonSearch type="submit">
-                    <i className="bi bi-search"></i>
+                <SearchForm action=''>
+                  <input type='text' />
+                  <ButtonSearch type='submit'>
+                    <i className='bi bi-search'></i>
                   </ButtonSearch>
                 </SearchForm>
               </div>
@@ -855,37 +820,37 @@ const LandingBlogDetails = () => {
                 <h3>Categories</h3>
                 <ul>
                   <li>
-                    <a href="">
+                    <a href=''>
                       General
                       <span>(25)</span>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       Lifestyle
                       <span>(12)</span>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       Travel
                       <span>(5)</span>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       Design
                       <span>(22)</span>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       Creative
                       <span>(8)</span>
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a href=''>
                       Educaion
                       <span>(14)</span>
                     </a>
@@ -897,10 +862,10 @@ const LandingBlogDetails = () => {
                   {recentPosts.map((item, index) => {
                     return (
                       <PostItem key={index}>
-                        <img src={item.img} alt="" />
+                        <img src={item.img} alt='' />
                         <div>
                           <h4>
-                            <a href="">{item.title}</a>
+                            <a href=''>{item.title}</a>
                           </h4>
                           <time>{item.date}</time>
                         </div>
@@ -913,37 +878,37 @@ const LandingBlogDetails = () => {
                 <h3></h3>
                 <ul>
                   <li>
-                    <a href="">App</a>
+                    <a href=''>App</a>
                   </li>
                   <li>
-                    <a href="">IT</a>
+                    <a href=''>IT</a>
                   </li>
                   <li>
-                    <a href="">Business</a>
+                    <a href=''>Business</a>
                   </li>
                   <li>
-                    <a href="">Mac</a>
+                    <a href=''>Mac</a>
                   </li>
                   <li>
-                    <a href="">Desing</a>
+                    <a href=''>Desing</a>
                   </li>
                   <li>
-                    <a href="">Office</a>
+                    <a href=''>Office</a>
                   </li>
                   <li>
-                    <a href="">Creative</a>
+                    <a href=''>Creative</a>
                   </li>
                   <li>
-                    <a href="">Studio</a>
+                    <a href=''>Studio</a>
                   </li>
                   <li>
-                    <a href="">Smart</a>
+                    <a href=''>Smart</a>
                   </li>
                   <li>
-                    <a href="">Tips</a>
+                    <a href=''>Tips</a>
                   </li>
                   <li>
-                    <a href="">Marketing</a>
+                    <a href=''>Marketing</a>
                   </li>
                 </ul>
               </Tags>

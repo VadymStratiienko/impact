@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
-import { Posts } from "../../data/posts";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
+import { Posts } from '../../data/posts';
 
 const Section = styled.section`
   background-color: #f6f6f6;
@@ -104,20 +104,18 @@ const PostDate = styled.p`
 `;
 
 const RecentBlogPosts = () => {
-
-  if(Posts.length > 3) {
-    Posts.length = 3
+  if (Posts.length > 3) {
+    Posts.length = 3;
   }
-  
+
   return (
-    <Section id="recent-posts">
-      <ContainerBlog  data-aos="fade-up">
+    <Section id='recent-posts'>
+      <ContainerBlog data-aos='fade-up'>
         <SectionHeader>
           <h2>Recent Blog Posts</h2>
           <p>
-            Consequatur libero assumenda est voluptatem est quidem illum et
-            officia imilique qui vel architecto accusamus fugit aut qui
-            distinctio
+            Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui
+            vel architecto accusamus fugit aut qui distinctio
           </p>
         </SectionHeader>
         <WrapperPosts>
@@ -126,14 +124,14 @@ const RecentBlogPosts = () => {
               <Post key={index}>
                 <article>
                   <PostImg>
-                    <img src={item.postImg} alt="" />
+                    <img src={item.postImg} alt='' />
                   </PostImg>
                   <Category>{item.category}</Category>
                   <h2>
-                    <Link to="/blog-details">{item.title}</Link>
+                    <Link to='/blog-details'>{item.title}</Link>
                   </h2>
                   <Author>
-                    <img src={item.photoAuthor} alt="" />
+                    <img src={item.photoAuthor} alt='' />
                     <div>
                       <PostAutor>{item.name}</PostAutor>
                       <PostDate>

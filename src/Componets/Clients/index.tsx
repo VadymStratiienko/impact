@@ -1,10 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import styled from "styled-components";
-import { clientsData } from "../../data/clients";
-import { Container } from "../../Assets";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import styled from 'styled-components';
+import { clientsData } from '../../data/clients';
+import { Container } from '../../Assets';
 
 const Section = styled.section`
   padding: 40px 0;
@@ -44,7 +44,7 @@ const Section = styled.section`
 const Clients = () => {
   return (
     <Section>
-      <Container  data-aos="zoom-out">
+      <Container data-aos='zoom-out'>
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
@@ -74,12 +74,12 @@ const Clients = () => {
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Navigation]}
-          className="ClientSwiper"
+          className='ClientSwiper'
         >
           {clientsData.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <img src={item.img} alt="" />
+                <img src={item.img} alt='' />
               </SwiperSlide>
             );
           })}

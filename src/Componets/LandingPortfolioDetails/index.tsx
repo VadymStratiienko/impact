@@ -1,16 +1,16 @@
-import React from "react";
-import { Autoplay, Pagination, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import AppImg from "../../Assets/img/portfolio/app-1.jpg";
-import BookImg from "../../Assets/img/portfolio/books-1.jpg";
-import ProductImg from "../../Assets/img/portfolio/product-1.jpg";
-import BrandingImg from "../../Assets/img/portfolio/branding-1.jpg";
-import Testimonials from "../../Assets/img/testimonials/testimonials-2.jpg";
+import React from 'react';
+import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import AppImg from '../../Assets/img/portfolio/app-1.jpg';
+import BookImg from '../../Assets/img/portfolio/books-1.jpg';
+import ProductImg from '../../Assets/img/portfolio/product-1.jpg';
+import BrandingImg from '../../Assets/img/portfolio/branding-1.jpg';
+import Testimonials from '../../Assets/img/testimonials/testimonials-2.jpg';
 
 const ContainerPortfolioDetails = styled(Container)`
   display: block;
@@ -72,7 +72,7 @@ const WrapperSwiper = styled.div`
   }
   .swiper-button-prev:after,
   .swiper-rtl .swiper-button-next:after {
-    content: "prev";
+    content: 'prev';
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {
@@ -111,8 +111,7 @@ const WrapperSwiper = styled.div`
     opacity: 1;
   }
   .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-  .swiper-pagination-horizontal.swiper-pagination-bullets
-    .swiper-pagination-bullet {
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
   }
   .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -228,7 +227,7 @@ const PortfolioInfo = styled.div`
     position: relative;
   }
   h3::after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 50px;
@@ -277,7 +276,7 @@ const LandingPortfolioDetails = () => {
             speed={600}
             spaceBetween={30}
             centeredSlides={true}
-            slidesPerView="auto"
+            slidesPerView='auto'
             loop={true}
             autoplay={{
               delay: 5000,
@@ -288,19 +287,19 @@ const LandingPortfolioDetails = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
+            className='mySwiper'
           >
             <SwiperSlide>
-              <img src={AppImg} alt="" />
+              <img src={AppImg} alt='' />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={BrandingImg} alt="" />
+              <img src={BrandingImg} alt='' />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={ProductImg} alt="" />
+              <img src={ProductImg} alt='' />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={BookImg} alt="" />
+              <img src={BookImg} alt='' />
             </SwiperSlide>
           </Swiper>
         </WrapperSwiper>
@@ -309,46 +308,40 @@ const LandingPortfolioDetails = () => {
             <Description>
               <h2>This is an example of portfolio detail</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                itaque inventore commodi labore quia quia. Exercitationem
-                repudiandae officiis neque suscipit non officia eaque itaque
-                enim. Voluptatem officia accusantium nesciunt est omnis tempora
-                consectetur dignissimos. Sequi nulla at esse enim cum deserunt
-                eius.
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi
+                labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia
+                eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora
+                consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
               </p>
               <p>
-                Amet consequatur qui dolore veniam voluptatem voluptatem sit.
-                Non aspernatur atque natus ut cum nam et. Praesentium error
-                dolores rerum minus sequi quia veritatis eum. Eos et doloribus
-                doloremque nesciunt molestiae laboriosam.
+                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque
+                natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis
+                eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
               </p>
               <TestimoialItem>
                 <p>
-                  <i className="bi bi-quote quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
-                  <i className="bi bi-quote quote-icon-right"></i>
+                  <i className='bi bi-quote quote-icon-left'></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
+                  quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat
+                  irure amet legam anim culpa.
+                  <i className='bi bi-quote quote-icon-right'></i>
                 </p>
                 <div>
-                  <img src={Testimonials} alt="" />
+                  <img src={Testimonials} alt='' />
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
                 </div>
               </TestimoialItem>
               <p>
-                Impedit ipsum quae et aliquid doloribus et voluptatem quasi.
-                Perspiciatis occaecati earum et magnam animi. Quibusdam non qui
-                ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus
-                deserunt assumenda tempore. Delectus voluptas necessitatibus
+                Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati
+                earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae
+                incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus
                 est.
               </p>
               <p>
-                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat
-                debitis. Molestiae et autem libero. Explicabo et quod
-                necessitatibus similique quis dolor eum. Numquam eaque
-                praesentium rem et qui nesciunt.
+                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et
+                autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam
+                eaque praesentium rem et qui nesciunt.
               </p>
             </Description>
           </PortfolioDescription>
@@ -370,10 +363,10 @@ const LandingPortfolioDetails = () => {
                 </li>
                 <li>
                   <strong>PROJECT URL</strong>
-                  <a href="#">www.example.com</a>
+                  <a href='#'>www.example.com</a>
                 </li>
                 <li>
-                  <BtnVisit href="#">Visit Website</BtnVisit>
+                  <BtnVisit href='#'>Visit Website</BtnVisit>
                 </li>
               </ul>
             </PortfolioInfo>

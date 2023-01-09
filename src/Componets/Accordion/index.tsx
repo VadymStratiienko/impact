@@ -1,7 +1,7 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Accordion from "react-bootstrap/Accordion";
-import styled from "styled-components";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Accordion from 'react-bootstrap/Accordion';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   .accordion-item {
@@ -59,73 +59,68 @@ const Wrapper = styled.div`
 
 const AccordionComponent = () => {
   return (
-    <Wrapper data-aos="fade-up" data-aos-delay="100">
-      {" "}
+    <Wrapper data-aos='fade-up' data-aos-delay='100'>
+      {' '}
       <Accordion flush>
-        <Accordion.Item eventKey="0">
+        <Accordion.Item eventKey='0'>
           <Accordion.Header>
-            <span className="num">1.</span>  Non consectetur a erat nam at
-            lectus urna duis?
+            <span className='num'>1.</span>  Non consectetur a erat nam at lectus urna duis?
           </Accordion.Header>
           <Accordion.Body>
-            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-            volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna
-            fringilla urna porttitor rhoncus dolor purus non.
+            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+            curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus
+            non.
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="2">
+        <Accordion.Item eventKey='2'>
           <Accordion.Header>
-            {" "}
-            <span className="num">2.</span>  Feugiat scelerisque varius morbi
-            enim nunc faucibus a pellentesque?
+            {' '}
+            <span className='num'>2.</span>  Feugiat scelerisque varius morbi enim nunc faucibus a
+            pellentesque?
           </Accordion.Header>
           <Accordion.Body>
-            Dolor sit amet consectetur adipiscing elit pellentesque habitant
-            morbi. Id interdum velit laoreet id donec ultrices. Fringilla
-            phasellus faucibus scelerisque eleifend donec pretium. Est
-            pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+            velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
+            donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
             cursus turpis massa tincidunt dui.
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="3">
+        <Accordion.Item eventKey='3'>
           <Accordion.Header>
-            {" "}
-            <span className="num">3.</span>  Dolor sit amet consectetur
-            adipiscing elit pellentesque habitant morbi?
+            {' '}
+            <span className='num'>3.</span>  Dolor sit amet consectetur adipiscing elit
+            pellentesque habitant morbi?
           </Accordion.Header>
           <Accordion.Body>
-            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis
-            orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra
-            diam sit amet nisl suscipit. Rutrum tellus pellentesque eu
-            tincidunt. Lectus urna duis convallis convallis tellus. Urna
+            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus
+            pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
+            tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna
             molestie at elementum eu facilisis sed odio morbi quis
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="4">
+        <Accordion.Item eventKey='4'>
           <Accordion.Header>
-            {" "}
-            <span className="num">4.</span>  Ac odio tempor orci dapibus.
-            Aliquam eleifend mi in nulla?
+            {' '}
+            <span className='num'>4.</span>  Ac odio tempor orci dapibus. Aliquam eleifend mi in
+            nulla?
           </Accordion.Header>
           <Accordion.Body>
-            Dolor sit amet consectetur adipiscing elit pellentesque habitant
-            morbi. Id interdum velit laoreet id donec ultrices. Fringilla
-            phasellus faucibus scelerisque eleifend donec pretium. Est
-            pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
+            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum
+            velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend
+            donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
             cursus turpis massa tincidunt dui.
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="5">
+        <Accordion.Item eventKey='5'>
           <Accordion.Header>
-            {" "}
-            <span className="num">5.</span>  Tempus quam pellentesque nec nam
-            aliquam sem et tortor consequat?
+            {' '}
+            <span className='num'>5.</span>  Tempus quam pellentesque nec nam aliquam sem et tortor
+            consequat?
           </Accordion.Header>
           <Accordion.Body>
-            Molestie a iaculis at erat pellentesque adipiscing commodo.
-            Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra
-            maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est.
-            Purus gravida quis blandit turpis cursus in
+            Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in
+            est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit
+            adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

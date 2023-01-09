@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import AccordionComponent from "../Accordion";
-
+import React from 'react';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import AccordionComponent from '../Accordion';
 
 const ContainetFAQ = styled(Container)`
   display: block;
@@ -57,7 +56,7 @@ const BlockAccordion = styled.div`
 const FAQ = () => {
   return (
     <section>
-      <ContainetFAQ data-aos="fade-up">
+      <ContainetFAQ data-aos='fade-up'>
         <WrapperFAQ>
           <BlockContent>
             <Content>
@@ -65,14 +64,13 @@ const FAQ = () => {
                 Frequently Asked <strong>Questions</strong>
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
-                aute irure dolor in reprehenderit
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
               </p>
             </Content>
           </BlockContent>
           <BlockAccordion>
-           <AccordionComponent />
+            <AccordionComponent />
           </BlockAccordion>
         </WrapperFAQ>
       </ContainetFAQ>

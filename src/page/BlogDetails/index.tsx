@@ -1,6 +1,6 @@
-import React from 'react'
-import BannerBlogDetails from '../../Componets/BannerBlogDetails'
-import LandingBlogDetails from '../../Componets/LandingBlogDetails'
+import React from 'react';
+import BannerBlogDetails from '../../Componets/BannerBlogDetails';
+import LandingBlogDetails from '../../Componets/LandingBlogDetails';
 
 const BlogDatails = () => {
   return (
@@ -8,7 +8,7 @@ const BlogDatails = () => {
       <BannerBlogDetails />
       <LandingBlogDetails />
     </main>
-  )
-}
+  );
+};
 
-export default BlogDatails
+export default BlogDatails;

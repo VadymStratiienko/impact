@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
@@ -39,17 +39,17 @@ export const SectionHeader = styled.div`
     padding-bottom: 20px;
     position: relative;
     ::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--color-primary);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--color-primary);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
   }
   p {
     margin-bottom: 0;

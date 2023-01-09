@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import { Posts } from "../../data/posts";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import { Posts } from '../../data/posts';
 
 const ContainerBlog = styled(Container)`
   display: block;
@@ -129,22 +129,22 @@ const BlogPagination = styled.div`
 
 const LandingBlog = () => {
   return (
-    <section id="blog">
-      <ContainerBlog data-aos="fade-up">
+    <section id='blog'>
+      <ContainerBlog data-aos='fade-up'>
         <WrapperPosts>
           {Posts.map((item, index) => {
             return (
               <Post key={index}>
                 <article>
                   <PostImg>
-                    <img src={item.postImg} alt="" />
+                    <img src={item.postImg} alt='' />
                   </PostImg>
                   <Category>{item.category}</Category>
                   <h2>
-                    <Link to="/blog-details">{item.title}</Link>
+                    <Link to='/blog-details'>{item.title}</Link>
                   </h2>
                   <Author>
-                    <img src={item.photoAuthor} alt="" />
+                    <img src={item.photoAuthor} alt='' />
                     <div>
                       <PostAutor>{item.name}</PostAutor>
                       <PostDate>
@@ -159,15 +159,15 @@ const LandingBlog = () => {
           <BlogPagination>
             <ul>
               <li>
-                <a href="#">1</a>
+                <a href='#'>1</a>
               </li>
               <li>
-                <a href="#" className="active">
+                <a href='#' className='active'>
                   2
                 </a>
               </li>
               <li>
-                <a href="#">3</a>
+                <a href='#'>3</a>
               </li>
             </ul>
           </BlogPagination>

@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../../Assets";
+import React from 'react';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
 
 const ContainerFooter = styled(Container)`
   display: block;
@@ -148,26 +148,25 @@ const Footer = () => {
       <ContainerFooter>
         <FooterBlock>
           <FooterInfo>
-            <a href="#">
+            <a href='#'>
               <span>Impact</span>
             </a>
             <p>
-              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
-              nada terra videa magna derita valies darta donna mare fermentum
-              iaculis eu non diam phasellus.
+              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa
+              magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.
             </p>
             <Social>
-              <a href="#">
-                <i className="bi bi-twitter"></i>
+              <a href='#'>
+                <i className='bi bi-twitter'></i>
               </a>
-              <a href="#">
-                <i className="bi bi-facebook"></i>
+              <a href='#'>
+                <i className='bi bi-facebook'></i>
               </a>
-              <a href="#">
-                <i className="bi bi-instagram"></i>
+              <a href='#'>
+                <i className='bi bi-instagram'></i>
               </a>
-              <a href="#">
-                <i className="bi bi-linkedin"></i>
+              <a href='#'>
+                <i className='bi bi-linkedin'></i>
               </a>
             </Social>
           </FooterInfo>
@@ -175,19 +174,19 @@ const Footer = () => {
             <h4>Useful Links</h4>
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href='#'>Home</a>
               </li>
               <li>
-                <a href="#">About us</a>
+                <a href='#'>About us</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href='#'>Services</a>
               </li>
               <li>
-                <a href="#">Terms of service</a>
+                <a href='#'>Terms of service</a>
               </li>
               <li>
-                <a href="#">Privacy policy</a>
+                <a href='#'>Privacy policy</a>
               </li>
             </ul>
           </FooterLinks>
@@ -195,19 +194,19 @@ const Footer = () => {
             <h4>Our Services</h4>
             <ul>
               <li>
-                <a href="#">Web Design</a>
+                <a href='#'>Web Design</a>
               </li>
               <li>
-                <a href="#">Web Development</a>
+                <a href='#'>Web Development</a>
               </li>
               <li>
-                <a href="#">Product Management</a>
+                <a href='#'>Product Management</a>
               </li>
               <li>
-                <a href="#">Marketing</a>
+                <a href='#'>Marketing</a>
               </li>
               <li>
-                <a href="#">Graphic Design</a>
+                <a href='#'>Graphic Design</a>
               </li>
             </ul>
           </FooterLinks>
@@ -228,8 +227,8 @@ const Footer = () => {
         </FooterBlock>
         <ContainerInf>
           <Copyright>
-            {" "}
-            &copy; Copyright{" "}
+            {' '}
+            &copy; Copyright{' '}
             <strong>
               <span>Impact</span>
             </strong>

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
 
 const ContainerContact = styled(Container)`
   display: block;
@@ -108,7 +108,8 @@ const BlockForm = styled.div`
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
   }
-  input[type="text"],[type="email"] {
+  input[type='text'],
+  [type='email'] {
     padding: 12px 15px;
     border-radius: 0;
     box-shadow: none;
@@ -125,8 +126,9 @@ const BlockForm = styled.div`
     margin: 0;
     font-family: inherit;
   }
-  input[type="text"]:focus,
-  input[type="email"]:focus, textarea:focus{
+  input[type='text']:focus,
+  input[type='email']:focus,
+  textarea:focus {
     border-color: var(--color-primary);
   }
   textarea {
@@ -177,7 +179,7 @@ const Loading = styled.div`
   text-align: center;
   padding: 15px;
   ::before {
-    content: "";
+    content: '';
     display: inline-block;
     border-radius: 50%;
     width: 24px;
@@ -216,7 +218,7 @@ const SentMessage = styled.div`
 `;
 const ButtonBlock = styled.div`
   text-align: center !important;
-  button[type="submit"] {
+  button[type='submit'] {
     background: var(--color-primary);
     border: 0;
     padding: 14px 45px;
@@ -224,7 +226,7 @@ const ButtonBlock = styled.div`
     transition: 0.4s;
     border-radius: 50px;
   }
-  button[type="submit"]:hover {
+  button[type='submit']:hover {
     background: rgba(0, 131, 116, 0.8);
   }
 
@@ -251,27 +253,27 @@ const ButtonBlock = styled.div`
 
 const Cantact = () => {
   return (
-    <section id="contact">
-      <ContainerContact  data-aos="fade-up">
+    <section id='contact'>
+      <ContainerContact data-aos='fade-up'>
         <SectionHeader>
           <h2>Contact</h2>
           <p>
-            Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
-            porro nihil id ratione ea sunt quis dolorem dolore earum
+            Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione
+            ea sunt quis dolorem dolore earum
           </p>
         </SectionHeader>
         <Wrapper>
           <WrapInfo>
             <InfoContainer>
               <InfoItem>
-                <i className="bi bi-geo-alt"></i>
+                <i className='bi bi-geo-alt'></i>
                 <Info>
                   <h4>Location:</h4>
                   <p>A108 Adam Street, New York, NY 535022</p>
                 </Info>
               </InfoItem>
               <InfoItem>
-                <i className="bi bi-envelope"></i>
+                <i className='bi bi-envelope'></i>
 
                 <Info>
                   <h4>Email:</h4>
@@ -279,14 +281,14 @@ const Cantact = () => {
                 </Info>
               </InfoItem>
               <InfoItem>
-                <i className="bi bi-phone"></i>
+                <i className='bi bi-phone'></i>
                 <Info>
                   <h4>Call:</h4>
                   <p>+1 5589 55488 55</p>
                 </Info>
               </InfoItem>
               <InfoItem>
-                <i className="bi bi-clock"></i>
+                <i className='bi bi-clock'></i>
                 <Info>
                   <h4>Open Hours:</h4>
                   <p>Mon-Sat: 11AM - 23PM</p>
@@ -295,53 +297,28 @@ const Cantact = () => {
             </InfoContainer>
           </WrapInfo>
           <WrapForm>
-            <Form method="post" role="form">
+            <Form method='post' role='form'>
               <BlockForm>
                 <BlockInput>
-                  <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                  />
+                  <input id='name' type='text' name='name' placeholder='Your Name' required />
                 </BlockInput>
-                <BlockInput className="email">
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                  />
+                <BlockInput className='email'>
+                  <input id='email' type='email' name='email' placeholder='Your Email' required />
                 </BlockInput>
                 <FormGroup>
-                  <input
-                    id="subject"
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    required
-                  />
+                  <input id='subject' type='text' name='subject' placeholder='Subject' required />
                 </FormGroup>
                 <FormGroup>
-                  <textarea
-                    name="message"
-                    id=""
-                    rows={7}
-                    placeholder="Message"
-                  ></textarea>
+                  <textarea name='message' id='' rows={7} placeholder='Message'></textarea>
                 </FormGroup>
               </BlockForm>
               <BlockMessage>
                 <Loading />
                 <ErrorMessage>TypeError: Failed to fetch</ErrorMessage>
-                <SentMessage>
-                  Your message has been sent. Thank you!
-                </SentMessage>
+                <SentMessage>Your message has been sent. Thank you!</SentMessage>
               </BlockMessage>
               <ButtonBlock>
-                <button type="submit">Send Message</button>
+                <button type='submit'>Send Message</button>
               </ButtonBlock>
             </Form>
           </WrapForm>

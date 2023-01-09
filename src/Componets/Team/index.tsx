@@ -1,11 +1,11 @@
-import React from "react";
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
-import Team_1 from "../../Assets/img/team/team-1.jpg";
-import Team_2 from "../../Assets/img/team/team-2.jpg";
-import Team_3 from "../../Assets/img/team/team-3.jpg";
-import Team_4 from "../../Assets/img/team/team-4.jpg";
+import React from 'react';
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
+import Team_1 from '../../Assets/img/team/team-1.jpg';
+import Team_2 from '../../Assets/img/team/team-2.jpg';
+import Team_3 from '../../Assets/img/team/team-3.jpg';
+import Team_4 from '../../Assets/img/team/team-4.jpg';
 
 const ContainerTeam = styled(Container)`
   display: block;
@@ -105,95 +105,95 @@ const Linkedin = styled(BsLinkedin)`
 
 const Team = () => {
   return (
-    <section id="team">
-      <ContainerTeam data-aos="fade-up">
+    <section id='team'>
+      <ContainerTeam data-aos='fade-up'>
         <SectionHeader>
           <h2>Our Team</h2>
           <p>
-            Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
-            porro nihil id ratione ea sunt quis dolorem dolore earum
+            Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione
+            ea sunt quis dolorem dolore earum
           </p>
         </SectionHeader>
         <WrapperTeam>
-          <Member data-aos="fade-up" data-aos-delay="100">
+          <Member data-aos='fade-up' data-aos-delay='100'>
             <Block>
-              <img src={Team_1} alt="" />
+              <img src={Team_1} alt='' />
               <h4>Walter White</h4>
               <span>Web Development</span>
               <Social>
-                <a href="#">
+                <a href='#'>
                   <Twitter />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Facebook />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Instagram />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Linkedin />
                 </a>
               </Social>
             </Block>
           </Member>
-          <Member data-aos="fade-up" data-aos-delay="200">
+          <Member data-aos='fade-up' data-aos-delay='200'>
             <Block>
-              <img src={Team_2} alt="" />
+              <img src={Team_2} alt='' />
               <h4>Sarah Jhinson</h4>
               <span>Marketing</span>
               <Social>
-                <a href="#">
+                <a href='#'>
                   <Twitter />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Facebook />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Instagram />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Linkedin />
                 </a>
               </Social>
             </Block>
           </Member>
-          <Member data-aos="fade-up" data-aos-delay="300">
+          <Member data-aos='fade-up' data-aos-delay='300'>
             <Block>
-              <img src={Team_3} alt="" />
+              <img src={Team_3} alt='' />
               <h4>William Anderson</h4>
               <span>Content</span>
               <Social>
-                <a href="#">
+                <a href='#'>
                   <Twitter />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Facebook />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Instagram />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Linkedin />
                 </a>
               </Social>
             </Block>
           </Member>
-          <Member data-aos="fade-up" data-aos-delay="400">
+          <Member data-aos='fade-up' data-aos-delay='400'>
             <Block>
-              <img src={Team_4} alt="" />
+              <img src={Team_4} alt='' />
               <h4>Amanda Jepson</h4>
               <span>Accountant</span>
               <Social>
-                <a href="#">
+                <a href='#'>
                   <Twitter />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Facebook />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Instagram />
                 </a>
-                <a href="#">
+                <a href='#'>
                   <Linkedin />
                 </a>
               </Social>

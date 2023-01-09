@@ -5,10 +5,10 @@ import {
   BsCalendar4Week,
   BsChatSquareText,
   BsEasel,
-} from "react-icons/bs";
-import { FiActivity } from "react-icons/fi";
-import styled from "styled-components";
-import { Container, SectionHeader } from "../../Assets";
+} from 'react-icons/bs';
+import { FiActivity } from 'react-icons/fi';
+import styled from 'styled-components';
+import { Container, SectionHeader } from '../../Assets';
 
 const Section = styled.section`
   background-color: #f6f6f6;
@@ -83,7 +83,7 @@ const ServiceItem = styled.div`
       bottom: 0;
       left: 0;
       z-index: 1;
-      content: "";
+      content: '';
     }
   }
 `;
@@ -94,7 +94,7 @@ const BlockIcon = styled.div`
   margin-bottom: 50px;
   ::before {
     position: absolute;
-    content: "";
+    content: '';
     height: 100%;
     width: 100%;
     background: #eeeeee;
@@ -150,16 +150,16 @@ const ChatSquareText = styled(BsChatSquareText)`
 
 const Services = () => {
   return (
-    <Section id="services">
-      <ContainerServices data-aos="fade-up">
+    <Section id='services'>
+      <ContainerServices data-aos='fade-up'>
         <SectionHeader>
           <h2>Our Services</h2>
           <p>
-            Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro
-            incidunt dolores placeat sunt id nobis omnis tiledo stran delop
+            Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores
+            placeat sunt id nobis omnis tiledo stran delop
           </p>
         </SectionHeader>
-        <Table data-aos="fade-up" data-aos-delay="100">
+        <Table data-aos='fade-up' data-aos-delay='100'>
           <Block>
             <ServiceItem>
               <BlockIcon>
@@ -167,11 +167,10 @@ const Services = () => {
               </BlockIcon>
               <h3>Nesciunt Mete</h3>
               <p>
-                Provident nihil minus qui consequatur non omnis maiores. Eos
-                accusantium minus dolores iure perferendis tempore et
-                consequatur.
+                Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus
+                dolores iure perferendis tempore et consequatur.
               </p>
-              <a href="#">
+              <a href='#'>
                 Read more &nbsp;
                 <BsArrowRight />
               </a>
@@ -184,10 +183,10 @@ const Services = () => {
               </BlockIcon>
               <h3>Eosle Commodi</h3>
               <p>
-                Ut autem aut autem non a. Sint sint sit facilis nam iusto sint.
-                Libero corrupti neque eum hic non ut nesciunt dolorem.
+                Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti
+                neque eum hic non ut nesciunt dolorem.
               </p>
-              <a href="#">
+              <a href='#'>
                 Read more &nbsp;
                 <BsArrowRight />
               </a>
@@ -200,10 +199,10 @@ const Services = () => {
               </BlockIcon>
               <h3>Ledo Markt</h3>
               <p>
-                Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus
-                ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
+                voluptas adipisci eos earum corrupti.
               </p>
-              <a href="#">
+              <a href='#'>
                 Read more &nbsp;
                 <BsArrowRight />
               </a>
@@ -216,10 +215,10 @@ const Services = () => {
               </BlockIcon>
               <h3>Asperiores Commodit</h3>
               <p>
-                Non et temporibus minus omnis sed dolor esse consequatur.
-                Cupiditate sed error ea fuga sit provident adipisci neque.
+                Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea
+                fuga sit provident adipisci neque.
               </p>
-              <a href="#">
+              <a href='#'>
                 Read more &nbsp;
                 <BsArrowRight />
               </a>
@@ -232,10 +231,10 @@ const Services = () => {
               </BlockIcon>
               <h3>Velit Doloremque</h3>
               <p>
-                Cumque et suscipit saepe. Est maiores autem enim facilis ut aut
-                ipsam corporis aut. Sed animi at autem alias eius labore.
+                Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut.
+                Sed animi at autem alias eius labore.
               </p>
-              <a href="#">
+              <a href='#'>
                 Read more &nbsp;
                 <BsArrowRight />
               </a>
@@ -248,10 +247,10 @@ const Services = () => {
               </BlockIcon>
               <h3>Dolori Architecto</h3>
               <p>
-                Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque
-                non et debitis iure. Corrupti recusandae ducimus enim.
+                Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis
+                iure. Corrupti recusandae ducimus enim.
               </p>
-              <a href="#">
+              <a href='#'>
                 Read more &nbsp;
                 <BsArrowRight />
               </a>

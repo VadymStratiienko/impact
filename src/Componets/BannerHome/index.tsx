@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import styled from "styled-components";
-import { Container } from "../../Assets";
-import { BiCommand } from "react-icons/bi";
-import { BsEasel, BsGem, BsGeoAlt } from "react-icons/bs";
-import HeroImg from "../../Assets/img/hero-img.svg";
-import ModalVideo from "../Modal/ModalVideo";
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { Container } from '../../Assets';
+import { BiCommand } from 'react-icons/bi';
+import { BsEasel, BsGem, BsGeoAlt } from 'react-icons/bs';
+import HeroImg from '../../Assets/img/hero-img.svg';
+import ModalVideo from '../Modal/ModalVideo';
 
 const Section = styled.section`
   width: 100%;
@@ -17,7 +17,7 @@ const Section = styled.section`
 `;
 const ContainerBanner = styled(Container)<{ isScrolled: boolean }>`
   position: relative !important;
-  margin-top: ${({ isScrolled }) => (isScrolled ? "70px" : "")};
+  margin-top: ${({ isScrolled }) => (isScrolled ? '70px' : '')};
   > * {
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) * 0.5);
@@ -96,7 +96,7 @@ const IconBoxes = styled.div`
   margin: 0 auto;
   @media (min-width: 1200px) {
     ::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       left: 0;
@@ -165,7 +165,7 @@ const IconBox = styled.div`
         bottom: 0;
         left: 0;
         z-index: 1;
-        content: "";
+        content: '';
       }
     }
   }
@@ -213,79 +213,79 @@ const BannerHome = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <Section id="hero">
+    <Section id='hero'>
       <ContainerBanner isScrolled={isScrolled}>
-        <BlockInfo data-aos="fade-in">
+        <BlockInfo data-aos='fade-in'>
           <BlockStart>
             <h2>
               Welcome to <span>Impact</span>
             </h2>
             <p>
-              Sed autem laudantium dolores. Voluptatem itaque ea consequatur
-              eveniet. Eum quas beatae cumque eum quaerat.
+              Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas
+              beatae cumque eum quaerat.
             </p>
             <BlockBtn>
-              <BtnGetStarted href="#about">Get Started</BtnGetStarted>
+              <BtnGetStarted href='#about'>Get Started</BtnGetStarted>
               <BtnWatchVideo onClick={() => setIsOpen(true)}>
-                <i className="bi bi-play-circle"></i>
+                <i className='bi bi-play-circle'></i>
                 <span>Watch Video</span>
               </BtnWatchVideo>
               {isOpen && <ModalVideo isOpen={isOpen} setIsOpen={setIsOpen} />}
             </BlockBtn>
           </BlockStart>
           <BlockImg>
-            <img src={HeroImg} alt="" data-aos="zoom-out" data-aos-delay="100"/>
+            <img src={HeroImg} alt='' data-aos='zoom-out' data-aos-delay='100' />
           </BlockImg>
         </BlockInfo>
       </ContainerBanner>
       <IconBoxes>
         <ContainerIcons>
           <Boxes>
-            <Box data-aos="fade-up" data-aos-delay="100">
+            <Box data-aos='fade-up' data-aos-delay='100'>
               <IconBox>
                 <Icon>
                   <BsEasel />
                 </Icon>
                 <h4>
-                  <a href="#">Lorem Ipsum</a>
+                  <a href='#'>Lorem Ipsum</a>
                 </h4>
               </IconBox>
             </Box>
-            <Box data-aos="fade-up" data-aos-delay="200">
+            <Box data-aos='fade-up' data-aos-delay='200'>
               <IconBox>
                 <Icon>
                   <BsGem />
                 </Icon>
                 <h4>
-                  <a href="#">Sed ut perspiciatis</a>
+                  <a href='#'>Sed ut perspiciatis</a>
                 </h4>
               </IconBox>
             </Box>
-            <Box data-aos="fade-up" data-aos-delay="300">
+            <Box data-aos='fade-up' data-aos-delay='300'>
               <IconBox>
                 <Icon>
                   <BsGeoAlt />
                 </Icon>
                 <h4>
-                  <a href="#">Magni Dolores</a>
+                  <a href='#'>Magni Dolores</a>
                 </h4>
               </IconBox>
             </Box>
-            <Box data-aos="fade-up" data-aos-delay="500">
+            <Box data-aos='fade-up' data-aos-delay='500'>
               <IconBox>
                 <Icon>
                   <BiCommand />
                 </Icon>
                 <h4>
-                  <a href="#">Nemo Enim</a>
+                  <a href='#'>Nemo Enim</a>
                 </h4>
               </IconBox>
             </Box>
